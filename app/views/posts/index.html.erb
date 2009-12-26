@@ -1,13 +1,14 @@
-  <% for post in @posts %>
-	<hr>
-	<div class="post_title">
-      <h2><%=h post.title %></h2>
+<% for post in @posts %>
+    <div class="news_post">
+        <div class="post_title">
+          <%=h post.title %>
+        </div>
+        <div class="post_body">
+          <%=post.body %>
+          <br/>
+          <%= link_to "Delete this post", post, :confirm => 'Are you sure?', :method => :delete %>
+        </div>
     </div>
-    <div class="post_body">
-      <%=h post.body %>
-      <%= link_to "Destroy beeeaattcch", post, :confirm => 'Are you sure?', :method => :delete %>
-    </div>
-      
-  <% end %>
+<% end %>
 
 <p><%= link_to "New Post", new_post_path %></p>

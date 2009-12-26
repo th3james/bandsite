@@ -11,14 +11,27 @@
 	<%= stylesheet_link_tag 'global' %>
   </head>
   <body class="container">
-	<div class="span-24 last">
-		<h1>Barcode Channel</h1>
-	</div>
-	<div class="span-18 append-1">
-  		<%= yield %>
-	</div>
-	<div class="span-4 prepend-1 last">
-  		<%= yield :navigation %>
+	<div class="span-24 last page_frame">
+            <div class="span-22 prepend-1 append-1 last header">
+                BARCODE CHANNEL
+            </div>
+            <div class="span-17 prepend-1 append-1">
+                <%= yield %>
+            </div>
+            <div class="span-4 append-1 last">
+                <div class="navigation_item">
+                  Home
+                </div>
+                <div class="navigation_item">
+                  Listen
+                </div>
+                <div class="navigation_item">
+                  Download
+                </div>
+                <div class="navigation_item">
+                  Gallery
+                </div>
+            </div>
 	</div>
   </body>
 </html>
