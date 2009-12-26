@@ -3,15 +3,22 @@
 	<title>
 		Barcode Channel
 	</title>
-	<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
-	<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print">
+	<link rel="stylesheet" href="/stylesheets/blueprint/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="/stylesheets/blueprint/print.css" type="text/css" media="print">
 	<!--[if lt IE 8]>
 	  <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
 	<![endif]-->
 	<%= stylesheet_link_tag 'global' %>
   </head>
-  <body>
-	<h1>Welcome to you're home for "barcode channel's"  informations home on dah internetz</h1>
-  	<%= yield %>
+  <body class="container">
+	<div class="span-24 last">
+		<h1>Barcode Channel</h1>
+	</div>
+	<div class="span-18 append-1">
+  		<%= yield %>
+	</div>
+	<div class="span-4 prepend-1 last">
+  		<%= yield :navigation %>
+	</div>
   </body>
 </html>
