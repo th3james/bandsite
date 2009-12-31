@@ -1,665 +1,306 @@
+# Logfile created on Mon Dec 28 11:53:25 +0000 2009
 
-
-Processing PostsController#index (for 127.0.0.1 at 2009-12-06 21:20:00) [GET]
-  [4;36;1mPost Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: posts: SELECT * FROM "posts" [0m
-
-ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: posts: SELECT * FROM "posts" ):
-  app/controllers/posts_controller.rb:3:in `index'
-
-Rendered rescues/_trace (103.7ms)
-Rendered rescues/_request_and_response (1.1ms)
-Rendering rescues/layout (internal_server_error)
-  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
-  [4;36;1mSQL (18.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
-  [4;35;1mSQL (16.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
-  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
-Migrating to CreatePosts (20091206211930)
-  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
-  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091206211930')[0m
-  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
-  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("posts")[0m
-
-
-Processing PostsController#index (for 127.0.0.1 at 2009-12-06 21:20:18) [GET]
-  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" [0m
-Rendering posts/index
-
-ActionView::TemplateError (undefined method `title' for #<ActionView::Base:0x101d80318>) on line #1 of app/views/posts/index.html.erb:
-1: <% title "Posts" %>
-2: 
-3: <table>
-4:   <tr>
-
-    app/views/posts/index.html.erb:1
-
-Rendered rescues/_trace (98.5ms)
-Rendered rescues/_request_and_response (1.1ms)
-Rendering rescues/layout (internal_server_error)
-
-
-Processing PostsController#index (for 127.0.0.1 at 2009-12-06 22:59:16) [GET]
-  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" [0m
-Rendering posts/index
-Completed in 36ms (View: 31, DB: 0) | 200 OK [http://0.0.0.0/posts]
-
-
-Processing PostsController#new (for 127.0.0.1 at 2009-12-06 22:59:27) [GET]
-Rendering posts/new
-Completed in 13ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/posts/new]
-
-
-Processing PostsController#create (for 127.0.0.1 at 2009-12-06 22:59:42) [POST]
-  Parameters: {"commit"=>"Submit", "post"=>{"body"=>"Hi Rob", "title"=>"MUFUCKIN BARCODES INNIT"}, "authenticity_token"=>"zVr5dHD2XKL52sPKT0iLI/+GSKGxY8lLuUJ2F9KP6y8="}
-  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("created_at", "title", "body", "updated_at") VALUES('2009-12-06 22:59:42', 'MUFUCKIN BARCODES INNIT', 'Hi Rob', '2009-12-06 22:59:42')[0m
-Redirected to http://0.0.0.0:3000/posts
-Completed in 9ms (DB: 0) | 302 Found [http://0.0.0.0/posts]
-
-
-Processing PostsController#index (for 127.0.0.1 at 2009-12-06 22:59:42) [GET]
-  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" [0m
-Rendering posts/index
-Completed in 10ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/posts]
-
-
-Processing PostsController#index (for 127.0.0.1 at 2009-12-06 23:02:28) [GET]
-  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
-
-NoMethodError (undefined method `client' for #<PostsController:0x10418bc30>):
-  
-
-Rendered rescues/_trace (102.6ms)
-Rendered rescues/_request_and_response (0.3ms)
-Rendering rescues/layout (internal_server_error)
-
-
-Processing PostsController#index (for 127.0.0.1 at 2009-12-06 23:02:38) [GET]
-  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" [0m
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 11:53:35) [GET]
+  [4;36;1mPost Load (1.9ms)[0m   [0;1mSELECT * FROM "posts" [0m
 Rendering template within layouts/client
 Rendering posts/index
-Completed in 15ms (View: 11, DB: 0) | 200 OK [http://0.0.0.0/posts]
+Completed in 156ms (View: 149, DB: 2) | 200 OK [http://0.0.0.0/]
 
 
-Processing PostsController#index (for 127.0.0.1 at 2009-12-06 23:02:47) [GET]
-  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
-Rendering template within layouts/client
-Rendering posts/index
-Completed in 13ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/posts]
-
-
-Processing PostsController#index (for 127.0.0.1 at 2009-12-06 23:04:52) [GET]
-  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" [0m
-Rendering template within layouts/client
-Rendering posts/index
-Completed in 13ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/posts]
-
-
-Processing PostsController#index (for 127.0.0.1 at 2009-12-06 23:05:14) [GET]
-  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" [0m
-Rendering template within layouts/client
-Rendering posts/index
-Completed in 14ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/posts]
-
-
-Processing PostsController#new (for 127.0.0.1 at 2009-12-06 23:05:19) [GET]
-Rendering template within layouts/client
-Rendering posts/new
-Completed in 8ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/posts/new]
-
-
-Processing PostsController#create (for 127.0.0.1 at 2009-12-06 23:05:28) [POST]
-  Parameters: {"commit"=>"Submit", "post"=>{"body"=>"It is beans", "title"=>"We wrote a new song"}, "authenticity_token"=>"zVr5dHD2XKL52sPKT0iLI/+GSKGxY8lLuUJ2F9KP6y8="}
-  [4;35;1mPost Create (0.5ms)[0m   [0mINSERT INTO "posts" ("created_at", "title", "body", "updated_at") VALUES('2009-12-06 23:05:28', 'We wrote a new song', 'It is beans', '2009-12-06 23:05:28')[0m
-Redirected to http://0.0.0.0:3000/posts
-Completed in 76ms (DB: 0) | 302 Found [http://0.0.0.0/posts]
-
-
-Processing PostsController#index (for 127.0.0.1 at 2009-12-06 23:05:28) [GET]
-  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
-Rendering template within layouts/client
-Rendering posts/index
-Completed in 12ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/posts]
-
-
-Processing PostsController#index (for 127.0.0.1 at 2009-12-06 23:06:15) [GET]
-  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" [0m
-Rendering template within layouts/client
-Rendering posts/index
-Completed in 16ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/posts]
-
-
-Processing PostsController#index (for 127.0.0.1 at 2009-12-06 23:06:32) [GET]
-  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
-Rendering template within layouts/client
-Rendering posts/index
-Completed in 17ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/posts]
-
-
-Processing PostsController#index (for 127.0.0.1 at 2009-12-06 23:07:09) [GET]
-  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" [0m
-Rendering template within layouts/client
-Rendering posts/index
-Completed in 17ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/posts]
-
-
-Processing PostsController#index (for 127.0.0.1 at 2009-12-06 23:07:10) [GET]
-  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
-Rendering template within layouts/client
-Rendering posts/index
-Completed in 13ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/posts]
-
-
-Processing PostsController#new (for 127.0.0.1 at 2009-12-06 23:07:50) [GET]
-Rendering template within layouts/client
-Rendering posts/new
-Completed in 12ms (View: 7, DB: 0) | 200 OK [http://0.0.0.0/posts/new]
-
-
-Processing PostsController#create (for 127.0.0.1 at 2009-12-06 23:07:59) [POST]
-  Parameters: {"commit"=>"Submit", "post"=>{"body"=>"reply thru typing on here", "title"=>"I will now only "}, "authenticity_token"=>"zVr5dHD2XKL52sPKT0iLI/+GSKGxY8lLuUJ2F9KP6y8="}
-  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("created_at", "title", "body", "updated_at") VALUES('2009-12-06 23:07:59', 'I will now only ', 'reply thru typing on here', '2009-12-06 23:07:59')[0m
-Redirected to http://0.0.0.0:3000/posts
-Completed in 8ms (DB: 0) | 302 Found [http://0.0.0.0/posts]
-
-
-Processing PostsController#index (for 127.0.0.1 at 2009-12-06 23:07:59) [GET]
-  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
-Rendering template within layouts/client
-Rendering posts/index
-Completed in 15ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/posts]
-
-
-Processing PostsController#index (for 127.0.0.1 at 2009-12-06 23:08:30) [GET]
-  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" [0m
-Rendering template within layouts/client
-Rendering posts/index
-Completed in 20ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/posts]
-
-
-Processing PostsController#index (for 127.0.0.1 at 2009-12-06 23:10:39) [GET]
-  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
-Rendering template within layouts/client
-Rendering posts/index
-Completed in 24ms (View: 19, DB: 1) | 200 OK [http://0.0.0.0/posts]
-
-
-Processing PostsController#new (for 127.0.0.1 at 2009-12-06 23:11:05) [GET]
-Rendering template within layouts/client
-Rendering posts/new
-Completed in 12ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/posts/new]
-
-
-Processing PostsController#create (for 127.0.0.1 at 2009-12-06 23:11:14) [POST]
-  Parameters: {"commit"=>"Submit", "post"=>{"body"=>"Boat boat boat", "title"=>"Hat Boat"}, "authenticity_token"=>"zVr5dHD2XKL52sPKT0iLI/+GSKGxY8lLuUJ2F9KP6y8="}
-  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("created_at", "title", "body", "updated_at") VALUES('2009-12-06 23:11:14', 'Hat Boat', 'Boat boat boat', '2009-12-06 23:11:14')[0m
-Redirected to http://0.0.0.0:3000/posts
-Completed in 8ms (DB: 0) | 302 Found [http://0.0.0.0/posts]
-
-
-Processing PostsController#index (for 127.0.0.1 at 2009-12-06 23:11:14) [GET]
-  [4;36;1mPost Load (4.0ms)[0m   [0;1mSELECT * FROM "posts" [0m
-Rendering template within layouts/client
-Rendering posts/index
-Completed in 25ms (View: 17, DB: 4) | 200 OK [http://0.0.0.0/posts]
-
-
-Processing PostsController#index (for 127.0.0.1 at 2009-12-06 23:26:12) [GET]
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 12:06:17) [GET]
   [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
 Rendering template within layouts/client
 Rendering posts/index
-Completed in 32ms (View: 27, DB: 1) | 200 OK [http://0.0.0.0/posts]
-/!\ FAILSAFE /!\  Sat Dec 26 19:40:14 +0000 2009
-  Status: 500 Internal Server Error
-  no such file to load -- sqlite3
-    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
-    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:31:in `require'
-    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:156:in `require'
-    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:521:in `new_constants_in'
-    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:156:in `require'
-    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/kernel/requires.rb:7:in `require_library_or_gem'
-    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/kernel/reporting.rb:11:in `silence_warnings'
-    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/kernel/requires.rb:5:in `require_library_or_gem'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:10:in `sqlite3_connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
-    /opt/local/lib/ruby/1.8/monitor.rb:242:in `synchronize'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/debugger.rb:17:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
-    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
-    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
-    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
-    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:31:in `require'
-    script/server:3
-/!\ FAILSAFE /!\  Sat Dec 26 19:40:18 +0000 2009
-  Status: 500 Internal Server Error
-  no such file to load -- sqlite3
-    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
-    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:31:in `require'
-    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:156:in `require'
-    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:521:in `new_constants_in'
-    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:156:in `require'
-    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/kernel/requires.rb:7:in `require_library_or_gem'
-    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/kernel/reporting.rb:11:in `silence_warnings'
-    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/kernel/requires.rb:5:in `require_library_or_gem'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:10:in `sqlite3_connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
-    /opt/local/lib/ruby/1.8/monitor.rb:242:in `synchronize'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/debugger.rb:17:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
-    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
-    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
-    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
-    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:31:in `require'
-    script/server:3
-/!\ FAILSAFE /!\  Sat Dec 26 19:53:52 +0000 2009
-  Status: 500 Internal Server Error
-  no such file to load -- sqlite3
-    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
-    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:31:in `require'
-    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:156:in `require'
-    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:521:in `new_constants_in'
-    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:156:in `require'
-    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/kernel/requires.rb:7:in `require_library_or_gem'
-    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/kernel/reporting.rb:11:in `silence_warnings'
-    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/kernel/requires.rb:5:in `require_library_or_gem'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:10:in `sqlite3_connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
-    /opt/local/lib/ruby/1.8/monitor.rb:242:in `synchronize'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/debugger.rb:17:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
-    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
-    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
-    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
-    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:31:in `require'
-    script/server:3
-/!\ FAILSAFE /!\  Sat Dec 26 19:53:55 +0000 2009
-  Status: 500 Internal Server Error
-  no such file to load -- sqlite3
-    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
-    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:31:in `require'
-    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:156:in `require'
-    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:521:in `new_constants_in'
-    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:156:in `require'
-    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/kernel/requires.rb:7:in `require_library_or_gem'
-    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/kernel/reporting.rb:11:in `silence_warnings'
-    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/kernel/requires.rb:5:in `require_library_or_gem'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:10:in `sqlite3_connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
-    /opt/local/lib/ruby/1.8/monitor.rb:242:in `synchronize'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/debugger.rb:17:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
-    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
-    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
-    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
-    /opt/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
-    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
-    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:31:in `require'
-    script/server:3
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/]
 
 
-Processing PostsController#index (for 127.0.0.1 at 2009-12-26 19:55:39) [GET]
-  [4;36;1mPost Load (1.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 12:09:02) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
 Rendering template within layouts/client
 Rendering posts/index
-Completed in 221ms (View: 214, DB: 2) | 200 OK [http://0.0.0.0/posts]
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/]
 
 
-Processing PostsController#destroy (for 127.0.0.1 at 2009-12-26 19:55:49) [DELETE]
-  Parameters: {"authenticity_token"=>"k5W2BWyDOVThkeSvidcHuR59jcQ5adU1FmtgDT9veSI=", "id"=>"1"}
-  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
-  [4;36;1mPost Destroy (0.7ms)[0m   [0;1mDELETE FROM "posts" WHERE "id" = 1[0m
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 12:20:51) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 88ms (View: 83, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 12:20:53) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 12:20:59) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 23ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 12:21:22) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 22ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 12:24:10) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 12:24:46) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 18ms (View: 14, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 12:29:25) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 12:38:54) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 22ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 12:40:43) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 21ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 12:41:10) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 12:43:36) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 12:44:28) [GET]
+  [4;36;1mPost Load (0.7ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 21ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 12:45:37) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 12:46:58) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 12:47:39) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 12:48:02) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 12:48:09) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 12:48:21) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 12:48:34) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 12:48:56) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 18ms (View: 14, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 12:59:11) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 21ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 12:59:18) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 13:00:54) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 85ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 13:01:53) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 13:02:13) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-12-28 18:36:11) [GET]
+Rendering template within layouts/client
+Rendering posts/new
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://0.0.0.0/posts/new]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-12-28 18:36:21) [POST]
+  Parameters: {"commit"=>"Submit", "post"=>{"body"=>"LULZ!!!!!", "title"=>"HI Ned"}, "authenticity_token"=>"sz5+wcjLoOVk+ggCY7X/5H4hW2Xw56CYjO8fMY4tN90="}
+  [4;36;1mPost Create (24.3ms)[0m   [0;1mINSERT INTO "posts" ("created_at", "title", "body", "updated_at") VALUES('2009-12-28 18:36:21', 'HI Ned', 'LULZ!!!!!', '2009-12-28 18:36:21')[0m
 Redirected to http://0.0.0.0:3000/posts
-Completed in 12ms (DB: 1) | 302 Found [http://0.0.0.0/posts/1]
+Completed in 33ms (DB: 24) | 302 Found [http://0.0.0.0/posts]
 
 
-Processing PostsController#index (for 127.0.0.1 at 2009-12-26 19:55:49) [GET]
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 18:36:21) [GET]
   [4;35;1mPost Load (0.7ms)[0m   [0mSELECT * FROM "posts" [0m
 Rendering template within layouts/client
 Rendering posts/index
-Completed in 21ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/posts]
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/posts]
 
 
-Processing PostsController#index (for 127.0.0.1 at 2009-12-26 20:10:04) [GET]
-  [4;36;1mPost Load (0.7ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 20:53:48) [GET]
+  [4;36;1mPost Load (2.4ms)[0m   [0;1mSELECT * FROM "posts" [0m
 Rendering template within layouts/client
 Rendering posts/index
-Completed in 26ms (View: 20, DB: 1) | 200 OK [http://0.0.0.0/posts]
+Completed in 216ms (View: 207, DB: 2) | 200 OK [http://0.0.0.0/posts]
 
 
-Processing ApplicationController#index (for 127.0.0.1 at 2009-12-26 20:10:04) [GET]
-
-ActionController::RoutingError (No route matches "/css/blueprint/screen.css" with {:method=>:get}):
-  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
-  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
-
-Rendering rescues/layout (not_found)
+Processing PostsController#new (for 127.0.0.1 at 2009-12-28 20:54:31) [GET]
+Rendering template within layouts/client
+Rendering posts/new
+Completed in 37ms (View: 32, DB: 0) | 200 OK [http://0.0.0.0/posts/new]
 
 
-Processing ApplicationController#index (for 127.0.0.1 at 2009-12-26 20:10:04) [GET]
-
-ActionController::RoutingError (No route matches "/css/blueprint/print.css" with {:method=>:get}):
-  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
-  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
-
-Rendering rescues/layout (not_found)
+Processing PostsController#create (for 127.0.0.1 at 2009-12-28 20:54:45) [POST]
+  Parameters: {"commit"=>"Submit", "post"=>{"body"=>"I can program now", "title"=>"Hello World"}, "authenticity_token"=>"sz5+wcjLoOVk+ggCY7X/5H4hW2Xw56CYjO8fMY4tN90="}
+  [4;35;1mPost Create (37.0ms)[0m   [0mINSERT INTO "posts" ("created_at", "title", "body", "updated_at") VALUES('2009-12-28 20:54:45', 'Hello World', 'I can program now', '2009-12-28 20:54:45')[0m
+Redirected to http://0.0.0.0:3000/posts
+Completed in 49ms (DB: 37) | 302 Found [http://0.0.0.0/posts]
 
 
-Processing ApplicationController#index (for 127.0.0.1 at 2009-12-26 20:10:04) [GET]
-
-ActionController::RoutingError (No route matches "/stylesheets/global.css" with {:method=>:get}):
-  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
-  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
-
-Rendering rescues/layout (not_found)
-
-
-Processing PostsController#index (for 127.0.0.1 at 2009-12-26 20:10:06) [GET]
-  [4;35;1mPost Load (0.7ms)[0m   [0mSELECT * FROM "posts" [0m
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 20:54:45) [GET]
+  [4;36;1mPost Load (0.8ms)[0m   [0;1mSELECT * FROM "posts" [0m
 Rendering template within layouts/client
 Rendering posts/index
-Completed in 22ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/posts]
+Completed in 31ms (View: 26, DB: 1) | 200 OK [http://0.0.0.0/posts]
 
 
-Processing ApplicationController#index (for 127.0.0.1 at 2009-12-26 20:10:06) [GET]
-
-ActionController::RoutingError (No route matches "/css/blueprint/screen.css" with {:method=>:get}):
-  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
-  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
-
-Rendering rescues/layout (not_found)
-
-
-Processing ApplicationController#index (for 127.0.0.1 at 2009-12-26 20:10:06) [GET]
-
-ActionController::RoutingError (No route matches "/css/blueprint/print.css" with {:method=>:get}):
-  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
-  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
-
-Rendering rescues/layout (not_found)
-
-
-Processing ApplicationController#index (for 127.0.0.1 at 2009-12-26 20:10:06) [GET]
-
-ActionController::RoutingError (No route matches "/stylesheets/global.css" with {:method=>:get}):
-  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
-  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
-
-Rendering rescues/layout (not_found)
-
-
-Processing PostsController#index (for 127.0.0.1 at 2009-12-26 20:10:28) [GET]
-  [4;36;1mPost Load (0.7ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 21:19:19) [GET]
+  [4;35;1mPost Load (0.8ms)[0m   [0mSELECT * FROM "posts" [0m
 Rendering template within layouts/client
 Rendering posts/index
-Completed in 25ms (View: 20, DB: 1) | 200 OK [http://0.0.0.0/posts]
+Completed in 100ms (View: 94, DB: 1) | 200 OK [http://0.0.0.0/posts]
 
 
-Processing ApplicationController#index (for 127.0.0.1 at 2009-12-26 20:10:28) [GET]
-
-ActionController::RoutingError (No route matches "/css/blueprint/screen.css" with {:method=>:get}):
-  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
-  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
-
-Rendering rescues/layout (not_found)
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 21:20:08) [GET]
+  [4;36;1mPost Load (0.9ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 36ms (View: 30, DB: 1) | 200 OK [http://0.0.0.0/posts]
 
 
-Processing ApplicationController#index (for 127.0.0.1 at 2009-12-26 20:10:28) [GET]
-
-ActionController::RoutingError (No route matches "/css/blueprint/print.css" with {:method=>:get}):
-  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
-  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
-
-Rendering rescues/layout (not_found)
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 21:23:34) [GET]
+  [4;35;1mPost Load (0.9ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 38ms (View: 31, DB: 1) | 200 OK [http://0.0.0.0/posts]
 
 
-Processing ApplicationController#index (for 127.0.0.1 at 2009-12-26 20:10:28) [GET]
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 21:23:55) [GET]
+  [4;36;1mPost Load (0.8ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 31ms (View: 25, DB: 1) | 200 OK [http://0.0.0.0/posts]
 
-ActionController::RoutingError (No route matches "/stylesheets/global.css" with {:method=>:get}):
-  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
-  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
-  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
 
-Rendering rescues/layout (not_found)
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 21:24:35) [GET]
+  [4;35;1mPost Load (0.9ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 37ms (View: 30, DB: 1) | 200 OK [http://0.0.0.0/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 21:24:51) [GET]
+  [4;36;1mPost Load (0.9ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 36ms (View: 31, DB: 1) | 200 OK [http://0.0.0.0/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-28 23:43:21) [GET]
+  [4;35;1mPost Load (0.8ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 32ms (View: 25, DB: 1) | 200 OK [http://0.0.0.0/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-31 10:56:11) [GET]
+  [4;36;1mPost Load (2.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 224ms (View: 215, DB: 3) | 200 OK [http://0.0.0.0/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-12-31 10:59:50) [GET]
+  [4;35;1mPost Load (0.8ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 29ms (View: 24, DB: 1) | 200 OK [http://0.0.0.0/]

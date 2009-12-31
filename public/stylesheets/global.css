@@ -12,11 +12,11 @@ body {
     background-color: black;
     color:  white;
     font-size: 5em;
-    margin-bottom: 0.5em;
 }
 
 .news_post {
     padding-bottom: 10px;
+    margin-left: 1em;
 }
 
 .post_title {
@@ -31,12 +31,24 @@ body {
     background-color: #EEEEEE;
 }
 
+.nav_panel {
+    background-color: #EEEEEE;
+    color:  black;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
 .nav_item {
     background-color: #EEEEEE;
+    padding-left: 5px;
+    font-size: 2em;
+    margin-right: 1em;
 }
 .active_nav_item {
     background-color: black;
     color: white;
+    padding-left: 5px;
+    font-size: 2em;
 }
 .top_rounded {
     -moz-border-radius-topleft: 5px;
