@@ -1,7 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
   map.root :controller=>:posts, :action=>:index
-  
+
+  map.media_player "media_player", :controller => :songs, :action => :media_player
+
   map.resources :posts
+  map.resources :songs
 
   # The priority is based upon order of creation: first created -> highest priority.
 
