@@ -13,6 +13,7 @@ class SongsController < ApplicationController
   
   def media_player
     @songs = Song.all
+    render :layout => false  
   end
   
   def create
