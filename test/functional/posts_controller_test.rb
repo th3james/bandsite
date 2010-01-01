@@ -1,44 +1,24 @@
 require 'test_helper'
 
 class PostsControllerTest < ActionController::TestCase
-  def test_index
-    get :index
-    assert_template 'index'
+
+  context "on GET to :index with many posts" do
+    setup do
+      Factory(:post)
+      sleep(1)
+      Factory(:post)
+      get :index
+    end
+    
+    should_assign_to :posts
+    
+    should "have posts ordered by date decending" do
+      assert assigns(:posts).first.created_at > assigns(:posts).last.created_at 
+    end
+
+    should "have only the 5 most recent posts" do
+      assert 5 => assigns(:posts).size
+    end
   end
-  
-  def test_new
-    get :new
-    assert_template 'new'
-  end
-  
-  def test_create_invalid
-    Post.any_instance.stubs(:valid?).returns(false)
-    post :create
-    assert_template 'new'
-  end
-  
-  def test_create_valid
-    Post.any_instance.stubs(:valid?).returns(true)
-    post :create
-    assert_redirected_to posts_url
-  end
-  
-  def test_update_invalid
-    Post.any_instance.stubs(:valid?).returns(false)
-    put :update, :id => Post.first
-    assert_template 'edit'
-  end
-  
-  def test_update_valid
-    Post.any_instance.stubs(:valid?).returns(true)
-    put :update, :id => Post.first
-    assert_redirected_to posts_url
-  end
-  
-  def test_destroy
-    post = Post.first
-    delete :destroy, :id => post
-    assert_redirected_to posts_url
-    assert !Post.exists?(post.id)
-  end
+
 end
