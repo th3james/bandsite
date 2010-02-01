@@ -607,3 +607,24 @@ Processing SongsController#media_player (for 127.0.0.1 at 2010-02-01 20:24:47) [
   [4;36;1mSong Load (0.6ms)[0m   [0;1mSELECT * FROM "songs" [0m
 Rendering songs/media_player
 Completed in 45ms (View: 19, DB: 1) | 200 OK [http://0.0.0.0/media_player]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2010-02-01 21:20:07) [GET]
+Rendering template within layouts/client
+Rendering posts/new
+Completed in 27ms (View: 22, DB: 0) | 200 OK [http://0.0.0.0/posts/new]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2010-02-01 21:22:47) [POST]
+  Parameters: {"commit"=>"Submit", "post"=>{"body"=>"Yesterday we finally realized the typical format of a band, by getting ourselves into a practice room for 30 minutes.\r\nIt was good to hear the songs at some real volume, and give our vocal chords a bit of a flexing, but I can't recommend a single keyboard amp as a PA", "title"=>"First Noisey Practice"}, "authenticity_token"=>"4pcWVxzcMhvI7YlIKmn8wXyV3WfPbtzwfeWAcKJeuW0="}
+  [4;35;1mPost Create (0.5ms)[0m   [0mINSERT INTO "posts" ("created_at", "title", "body", "updated_at") VALUES('2010-02-01 21:22:47', 'First Noisey Practice', 'Yesterday we finally realized the typical format of a band, by getting ourselves into a practice room for 30 minutes.
+It was good to hear the songs at some real volume, and give our vocal chords a bit of a flexing, but I can''t recommend a single keyboard amp as a PA', '2010-02-01 21:22:47')[0m
+Redirected to http://0.0.0.0:3000/posts
+Completed in 11ms (DB: 0) | 302 Found [http://0.0.0.0/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-02-01 21:22:47) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/posts]
