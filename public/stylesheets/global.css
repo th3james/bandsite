@@ -1,15 +1,15 @@
 body {
-    background-color: #EEEEEE;
+    background-color: #48494D;
 }
 
 .page_frame {
     height: 100%;
-    background-color: #FFFFFF;
+    background-color: #3E3D42;
 }
 
 .header {
     height: 68;
-    background-color: black;
+    background-color: #3E3D42;
     color:  white;
     font-size: 5em;
 }
@@ -21,31 +21,30 @@ body {
 
 .post_title {
     padding-left: 5px;
-    background-color: black;
     color: white;
     font-size: 2em;
 }
 
 .post_body {
     padding-left: 5px;
-    background-color: #EEEEEE;
+    color: white;
 }
 
 .nav_panel {
-    background-color: #EEEEEE;
+    background-color: #85B931;
     color:  black;
     font-size: 2em;
     margin-bottom: 1em;
 }
 
 .nav_item {
-    background-color: #EEEEEE;
+    background-color: #85B931;
     padding-left: 5px;
     font-size: 2em;
     margin-right: 1em;
 }
 .active_nav_item {
-    background-color: black;
+    background-color: #85B931;
     color: white;
     padding-left: 5px;
     font-size: 2em;
