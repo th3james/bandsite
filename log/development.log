@@ -884,3 +884,221 @@ Processing PostsController#edit (for 127.0.0.1 at 2010-02-07 15:55:09) [GET]
 Rendering template within layouts/client
 Rendering posts/edit
 Completed in 24ms (View: 16, DB: 0) | 200 OK [http://0.0.0.0/posts/8/edit]
+
+
+Processing SongsController#new (for 127.0.0.1 at 2010-02-07 16:07:16) [GET]
+Rendering template within layouts/client
+Rendering songs/new
+Rendered songs/_form (12.4ms)
+Completed in 61ms (View: 36, DB: 0) | 200 OK [http://0.0.0.0/songs/new]
+
+
+Processing SongsController#create (for 127.0.0.1 at 2010-02-07 16:08:01) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"BrP6QWp2vMtgwmGjwCnbvOTLRs/HLnqOXk3VHAppKKI=", "song"=>{"name"=>"Ash Used Escape Rope", "url"=>"<object height=\"81\" width=\"100%\"> <param name=\"movie\" value=\"http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fsoundcloud.com%2Fbarcode-channel%2Fash-used-escape-rope\"></param> <param name=\"allowscriptaccess\" value=\"always\"></param> <embed allowscriptaccess=\"always\" height=\"81\" src=\"http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fsoundcloud.com%2Fbarcode-channel%2Fash-used-escape-rope\" type=\"application/x-shockwave-flash\" width=\"100%\"></embed> </object>  <span><a href=\"http://soundcloud.com/barcode-channel/ash-used-escape-rope\">Ash Used Escape Rope</a>  by  <a href=\"http://soundcloud.com/barcode-channel\">Barcode Channel</a></span> "}}
+  [4;36;1mSong Create (0.4ms)[0m   [0;1mINSERT INTO "songs" ("name", "created_at", "updated_at", "url") VALUES('Ash Used Escape Rope', '2010-02-07 16:08:01', '2010-02-07 16:08:01', '<object height="81" width="100%"> <param name="movie" value="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fsoundcloud.com%2Fbarcode-channel%2Fash-used-escape-rope"></param> <param name="allowscriptaccess" value="always"></param> <embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fsoundcloud.com%2Fbarcode-channel%2Fash-used-escape-rope" type="application/x-shockwave-flash" width="100%"></embed> </object> <span><a href="http://soundcloud.com/barcode-channel/ash-used-escape-rope">Ash Used Escape Rope</a> by <a href="http://soundcloud.com/barcode-channel">Barcode Channel</a></span> ')[0m
+Redirected to http://0.0.0.0:3000/songs/3
+Completed in 11ms (DB: 0) | 302 Found [http://0.0.0.0/songs]
+
+
+Processing SongsController#show (for 127.0.0.1 at 2010-02-07 16:08:01) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mSong Load (0.4ms)[0m   [0mSELECT * FROM "songs" WHERE ("songs"."id" = 3) [0m
+Rendering template within layouts/client
+Rendering songs/show
+Completed in 43ms (View: 34, DB: 0) | 200 OK [http://0.0.0.0/songs/3]
+
+
+Processing SongsController#show (for 127.0.0.1 at 2010-02-07 16:08:08) [GET]
+  Parameters: {"id"=>"media_player"}
+  [4;36;1mSong Load (0.2ms)[0m   [0;1mSELECT * FROM "songs" WHERE ("songs"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Song with ID=media_player):
+  app/controllers/songs_controller.rb:7:in `show'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-02-07 16:08:14) [GET]
+  [4;35;1mSong Load (0.7ms)[0m   [0mSELECT * FROM "songs" [0m
+Rendering template within layouts/client
+Rendering songs/index
+
+ActionView::TemplateError (undefined method `title' for #<ActionView::Base:0x103852650>) on line #1 of app/views/songs/index.html.erb:
+1: <% title "Songs" %>
+2: 
+3: <table>
+4:   <tr>
+
+    app/views/songs/index.html.erb:1
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (54.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SongsController#media_player (for 127.0.0.1 at 2010-02-07 16:08:38) [GET]
+  [4;36;1mSong Load (1.8ms)[0m   [0;1mSELECT * FROM "songs" [0m
+Rendering songs/media_player
+Completed in 15ms (View: 7, DB: 2) | 200 OK [http://0.0.0.0/media_player]
+
+
+Processing SongsController#media_player (for 127.0.0.1 at 2010-02-07 16:09:52) [GET]
+  [4;35;1mSong Load (0.9ms)[0m   [0mSELECT * FROM "songs" [0m
+Rendering songs/media_player
+Completed in 10ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/media_player]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-02-07 16:09:56) [GET]
+  [4;36;1mSong Load (0.8ms)[0m   [0;1mSELECT * FROM "songs" [0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 33ms (View: 26, DB: 1) | 200 OK [http://0.0.0.0/songs]
+
+
+Processing SongsController#destroy (for 127.0.0.1 at 2010-02-07 16:10:20) [DELETE]
+  Parameters: {"authenticity_token"=>"BrP6QWp2vMtgwmGjwCnbvOTLRs/HLnqOXk3VHAppKKI=", "id"=>"2"}
+  [4;35;1mSong Load (0.4ms)[0m   [0mSELECT * FROM "songs" WHERE ("songs"."id" = 2) [0m
+  [4;36;1mSong Destroy (0.5ms)[0m   [0;1mDELETE FROM "songs" WHERE "id" = 2[0m
+Redirected to http://0.0.0.0:3000/songs
+Completed in 14ms (DB: 1) | 302 Found [http://0.0.0.0/songs/2]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-02-07 16:10:20) [GET]
+  [4;35;1mSong Load (0.8ms)[0m   [0mSELECT * FROM "songs" [0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://0.0.0.0/songs]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-02-07 16:12:27) [GET]
+  [4;36;1mSong Load (0.6ms)[0m   [0;1mSELECT * FROM "songs" [0m
+Rendering template within layouts/client
+Rendering songs/index
+
+ActionView::TemplateError (undefined local variable or method `song' for #<ActionView::Base:0x103488a88>) on line #4 of app/views/songs/index.html.erb:
+1: 
+2: <table>
+3:   <tr>
+4:     <th><%=h song.name %></th>
+5:   </tr>
+6:   <% for song in @songs %>
+7:     <tr>
+
+    app/views/songs/index.html.erb:4
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (124.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-02-07 16:12:42) [GET]
+  [4;35;1mSong Load (0.6ms)[0m   [0mSELECT * FROM "songs" [0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/songs]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-02-07 16:13:00) [GET]
+  [4;36;1mSong Load (1.6ms)[0m   [0;1mSELECT * FROM "songs" [0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 19ms (View: 11, DB: 2) | 200 OK [http://0.0.0.0/songs]
+
+
+Processing SongsController#show (for 127.0.0.1 at 2010-02-07 16:14:02) [GET]
+  Parameters: {"id"=>"manage"}
+  [4;35;1mSong Load (0.2ms)[0m   [0mSELECT * FROM "songs" WHERE ("songs"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Song with ID=manage):
+  app/controllers/songs_controller.rb:11:in `show'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (54.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing SongsController#manage (for 127.0.0.1 at 2010-02-07 16:14:45) [GET]
+  [4;36;1mSong Load (0.7ms)[0m   [0;1mSELECT * FROM "songs" [0m
+Rendering template within layouts/client
+Rendering songs/manage
+Completed in 26ms (View: 19, DB: 1) | 200 OK [http://0.0.0.0/manage_songs]
+
+
+Processing SongsController#edit (for 127.0.0.1 at 2010-02-07 16:14:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSong Load (0.3ms)[0m   [0mSELECT * FROM "songs" WHERE ("songs"."id" = 1) [0m
+Rendering template within layouts/client
+Rendering songs/edit
+
+ActionView::TemplateError (undefined method `title' for #<ActionView::Base:0x1038dd700>) on line #1 of app/views/songs/edit.html.erb:
+1: <% title "Edit Song" %>
+2: 
+3: <%= render :partial => 'form' %>
+4: 
+
+    app/views/songs/edit.html.erb:1
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (55.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SongsController#edit (for 127.0.0.1 at 2010-02-07 16:15:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSong Load (0.3ms)[0m   [0;1mSELECT * FROM "songs" WHERE ("songs"."id" = 1) [0m
+Rendering template within layouts/client
+Rendering songs/edit
+Rendered songs/_form (10.8ms)
+Completed in 25ms (View: 18, DB: 0) | 200 OK [http://0.0.0.0/songs/1/edit]
