@@ -647,3 +647,240 @@ Migrating to CreateSongs (20091231172750)
 [0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("posts")[0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("songs")[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20091206211930)
+Migrating to CreateSongs (20091231172750)
+Migrating to CreateUsers (20100202190549)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "crypted_password" varchar(255), "password_salt" varchar(255), "persistence_token" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100202190549')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("posts")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("songs")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-02-02 19:17:18) [GET]
+  [4;36;1mPost Load (1.2ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 126ms (View: 105, DB: 1) | 200 OK [http://0.0.0.0/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2010-02-02 19:17:20) [GET]
+Rendering template within layouts/client
+Rendering posts/new
+
+ActionView::TemplateError (undefined method `semantic_form_for' for #<ActionView::Base:0x1035bf848>) on line #1 of app/views/posts/new.html.erb:
+1: <% semantic_form_for @post do |f| %>
+2:   <%= f.error_messages %>
+3:   <%= f.inputs %>
+4:   <%= f.buttons %>
+
+    app/views/posts/new.html.erb:1
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (120.8ms)
+Rendered rescues/_request_and_response (1.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#new (for 127.0.0.1 at 2010-02-02 19:19:14) [GET]
+Rendering template within layouts/client
+Rendering posts/new
+
+ActionView::TemplateError (undefined method `semantic_form_for' for #<ActionView::Base:0x1036d6588>) on line #1 of app/views/posts/new.html.erb:
+1: <% semantic_form_for @post do |f| %>
+2:   <%= f.error_messages %>
+3:   <%= f.inputs %>
+4:   <%= f.buttons %>
+
+    app/views/posts/new.html.erb:1
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (55.9ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-02-07 15:50:40) [GET]
+  [4;36;1mPost Load (2.0ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 116ms (View: 94, DB: 2) | 200 OK [http://0.0.0.0/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-02-07 15:50:51) [GET]
+  [4;35;1mPost Load (0.7ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2010-02-07 15:51:02) [GET]
+Rendering template within layouts/client
+Rendering posts/new
+Completed in 49ms (View: 40, DB: 0) | 200 OK [http://0.0.0.0/posts/new]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-02-07 15:51:11) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 10ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/posts]
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2010-02-07 15:53:56) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mPost Load (335.6ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Post with ID=4):
+  app/controllers/posts_controller.rb:11:in `edit'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.7ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2010-02-07 15:54:03) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 5) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Post with ID=5):
+  app/controllers/posts_controller.rb:11:in `edit'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2010-02-07 15:54:08) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 6) [0m
+Rendering template within layouts/client
+Rendering posts/edit
+
+ActionView::TemplateError (undefined local variable or method `post' for #<ActionView::Base:0x10322ef30>) on line #9 of app/views/posts/edit.html.erb:
+6: 
+7: 
+8: <p><%= link_to "Back to List", posts_path %></p>
+9: <%= link_to "Delete this post", post, :confirm => 'Are you sure?', :method => :delete %>
+
+    app/views/posts/edit.html.erb:9
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (56.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2010-02-07 15:54:31) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 6) [0m
+Rendering template within layouts/client
+Rendering posts/edit
+Completed in 27ms (View: 20, DB: 1) | 200 OK [http://0.0.0.0/posts/6/edit]
+
+
+Processing PostsController#update (for 127.0.0.1 at 2010-02-07 15:54:57) [PUT]
+  Parameters: {"commit"=>"Update Post", "post"=>{"body"=>"I can program now", "title"=>"Hello World!!!!!"}, "authenticity_token"=>"BrP6QWp2vMtgwmGjwCnbvOTLRs/HLnqOXk3VHAppKKI=", "id"=>"6"}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 6) [0m
+  [4;36;1mPost Update (0.5ms)[0m   [0;1mUPDATE "posts" SET "updated_at" = '2010-02-07 15:54:57', "title" = 'Hello World!!!!!' WHERE "id" = 6[0m
+Redirected to http://0.0.0.0:3000/posts
+Completed in 13ms (DB: 1) | 302 Found [http://0.0.0.0/posts/6]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-02-07 15:54:57) [GET]
+  [4;35;1mPost Load (0.7ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/posts]
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2010-02-07 15:55:04) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mPost Load (0.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 7) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Post with ID=7):
+  app/controllers/posts_controller.rb:11:in `edit'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2010-02-07 15:55:09) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 8) [0m
+Rendering template within layouts/client
+Rendering posts/edit
+Completed in 24ms (View: 16, DB: 0) | 200 OK [http://0.0.0.0/posts/8/edit]

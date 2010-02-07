@@ -6,9 +6,6 @@
         <div class="post_body bottom_rounded">
           <%=post.body %>
           <br/>
-          <%= link_to "Delete this post", post, :confirm => 'Are you sure?', :method => :delete %>
         </div>
     </div>
 <% end %>
-
-<p><%= link_to "New Post", new_post_path %></p>
