@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100202190549) do
+ActiveRecord::Schema.define(:version => 20100207163114) do
 
   create_table "posts", :force => true do |t|
     t.string   "title"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20100202190549) do
 
   create_table "songs", :force => true do |t|
     t.string   "name"
-    t.string   "url"
+    t.text     "url",        :limit => 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
