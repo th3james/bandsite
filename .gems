@@ -1,3 +1,4 @@
-
   thoughtbot-shoulda -s "http://gems.github.com"
   thoughtbot-factory_girl -s "http://gems.github.com"
+  authlogic -s "http://gems.github.com"
+  formtastic -s "http://gems.github.com"
