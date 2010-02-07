@@ -2,6 +2,16 @@ body {
     background-color: #48494D;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.header_links {
+    color: white;
+    text-decoration: none;
+}
+
 .page_frame {
     height: 100%;
     background-color: #3E3D42;
@@ -12,6 +22,10 @@ body {
     background-color: #3E3D42;
     color:  white;
     font-size: 5em;
+}
+
+.header_links {
+    color: black;
 }
 
 .news_post {

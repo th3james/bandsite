@@ -1,11 +1,10 @@
-
-<table>
-  <% for song in @songs %>
-  <tr>
-    <th><%=h song.name %></th>
-  </tr>
-    <tr>
-      <td><%= song.url %></td>
-    </tr>
-  <% end %>
-</table>
+<% for song in @songs %>
+  <div class="news_post">
+    <div class="post_title top_rounded">
+      <%=h song.name %>
+    </div>
+    <div class="post_body bottom_rounded">
+      <%= song.url %>
+    </div>
+  </div>
+<% end %>

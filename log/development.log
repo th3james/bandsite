@@ -1147,3 +1147,233 @@ Processing SongsController#show (for 127.0.0.1 at 2010-02-07 16:39:58) [GET]
 Rendering template within layouts/client
 Rendering songs/show
 Completed in 15ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/songs/3]
+
+
+Processing PostsController#manage (for 127.0.0.1 at 2010-02-07 16:48:56) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/manage
+
+ActionView::TemplateError (undefined local variable or method `song' for #<ActionView::Base:0x10336bc68>) on line #11 of app/views/posts/manage.html.erb:
+8:           <br/>
+9:         </div>
+10:       <%= link_to "Show", post %></br>
+11:       <%= link_to "Edit", edit_post_path(song) %></br>
+12:       <%= link_to "Destroy", post, :confirm => 'Are you sure?', :method => :delete %></br>
+13:     </div>
+14: <% end %>
+
+    app/views/posts/manage.html.erb:11
+    app/views/posts/manage.html.erb:1:in `each'
+    app/views/posts/manage.html.erb:1
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (57.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#manage (for 127.0.0.1 at 2010-02-07 16:49:19) [GET]
+  [4;36;1mPost Load (0.7ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/manage
+Completed in 24ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/manage_posts]
+
+
+Processing PostsController#manage (for 127.0.0.1 at 2010-02-07 16:54:20) [GET]
+  [4;35;1mPost Load (0.7ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/manage
+Completed in 26ms (View: 19, DB: 1) | 200 OK [http://0.0.0.0/manage_posts]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-02-07 16:54:25) [GET]
+  [4;36;1mSong Load (0.9ms)[0m   [0;1mSELECT * FROM "songs" [0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/songs]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-02-07 16:54:26) [GET]
+  [4;35;1mPost Load (0.8ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 10ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-02-07 16:57:02) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 10ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-02-07 16:57:19) [GET]
+  [4;35;1mPost Load (0.7ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-02-07 16:58:41) [GET]
+  [4;36;1mPost Load (0.7ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+
+ActionView::TemplateError (undefined local variable or method `header_links' for #<ActionView::Base:0x1036d8a18>) on line #21 of app/views/layouts/client.html.erb:
+18:             </div>
+19:             <div class="span-24 last nav_panel">
+20:               &nbsp;&nbsp;&nbsp;
+21:               <%= link_to "HOME", posts_path, :class => header_links %> |
+22:               <%= link_to "LISTEN", songs_path %> |
+23:               DOWNLOAD | GALLERY | ABOUT THE BAND 
+24:             </div>
+
+    app/views/layouts/client.html.erb:21
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (147.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-02-07 16:58:57) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-02-07 16:59:27) [GET]
+  [4;36;1mPost Load (0.7ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-02-07 16:59:57) [GET]
+  [4;35;1mPost Load (0.7ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/posts]
+
+
+Processing SongsController#media_player (for 127.0.0.1 at 2010-02-07 16:59:58) [GET]
+  [4;36;1mSong Load (0.7ms)[0m   [0;1mSELECT * FROM "songs" [0m
+Rendering songs/media_player
+Completed in 9ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/media_player]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-02-07 17:00:26) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-02-07 17:00:37) [GET]
+  [4;36;1mPost Load (0.8ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-02-07 17:00:48) [GET]
+  [4;35;1mPost Load (0.8ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-02-07 17:00:50) [GET]
+  [4;36;1mPost Load (0.7ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-02-07 17:00:56) [GET]
+  [4;35;1mPost Load (0.7ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/posts]
+
+
+Processing SongsController#media_player (for 127.0.0.1 at 2010-02-07 17:01:02) [GET]
+  [4;36;1mSong Load (0.7ms)[0m   [0;1mSELECT * FROM "songs" [0m
+Rendering songs/media_player
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/media_player]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-02-07 17:01:10) [GET]
+  [4;35;1mSong Load (0.7ms)[0m   [0mSELECT * FROM "songs" [0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 10ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/songs]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-02-07 17:04:27) [GET]
+  [4;36;1mSong Load (0.7ms)[0m   [0;1mSELECT * FROM "songs" [0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/songs]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-02-07 17:05:25) [GET]
+  [4;35;1mSong Load (0.7ms)[0m   [0mSELECT * FROM "songs" [0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/songs]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-02-07 17:05:39) [GET]
+  [4;36;1mSong Load (0.7ms)[0m   [0;1mSELECT * FROM "songs" [0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/songs]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-02-07 17:07:09) [GET]
+  [4;35;1mSong Load (0.6ms)[0m   [0mSELECT * FROM "songs" [0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/songs]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-02-07 17:07:52) [GET]
+  [4;36;1mSong Load (0.6ms)[0m   [0;1mSELECT * FROM "songs" [0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/songs]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-02-07 17:07:53) [GET]
+  [4;35;1mSong Load (0.7ms)[0m   [0mSELECT * FROM "songs" [0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 10ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/songs]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-02-07 17:09:01) [GET]
+  [4;36;1mSong Load (0.7ms)[0m   [0;1mSELECT * FROM "songs" [0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/songs]
