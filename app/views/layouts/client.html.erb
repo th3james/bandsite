@@ -20,17 +20,14 @@
               &nbsp;&nbsp;&nbsp;
               <%= link_to "HOME", posts_path, :class => "header_links" %> |
               <%= link_to "LISTEN", songs_path, :class => "header_links" %> |
-              DOWNLOAD | GALLERY | ABOUT THE BAND 
+              DOWNLOAD | IMAGES | ABOUT THE BAND 
             </div>
             <div class="span-19 ">
                 <%= yield %>
             </div>
             <div class="span-5 last">
-                <div class="nav_item active_nav_item top_rounded">
-                  MEDIA PLAYER
-                </div>
-                <div class="nav_item bottom_rounded">
-                  <%= link_to "Listen in a new window/tab >>", media_player_path, :target => "_blank" %>
+                <div class="nav_item bottom_rounded top_rounded">
+                  <%= link_to "MEDIA PLAYER >>", media_player_path, :target => "_blank" %>
                 </div>
             </div>
 	</div>

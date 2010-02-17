@@ -1,6 +1,6 @@
 class SongsController < ApplicationController
   def index
-    @songs = Song.all
+    @songs = Song.all :order => "name DESC"
   end
   
   def manage
@@ -16,7 +16,7 @@ class SongsController < ApplicationController
   end
   
   def media_player
-    @songs = Song.all
+    @songs = Song.all :order => "name DESC"
     render :layout => false  
   end
   

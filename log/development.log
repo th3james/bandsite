@@ -1377,3 +1377,74 @@ Processing SongsController#index (for 127.0.0.1 at 2010-02-07 17:09:01) [GET]
 Rendering template within layouts/client
 Rendering songs/index
 Completed in 16ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/songs]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-02-17 13:05:24) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 87ms (View: 81, DB: 1) | 200 OK [http://0.0.0.0/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-02-17 13:08:52) [GET]
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-02-17 13:09:14) [GET]
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/posts]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-02-17 13:10:25) [GET]
+  [4;35;1mSong Load (0.6ms)[0m   [0mSELECT * FROM "songs" [0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/songs]
+
+
+Processing SongsController#manage (for 127.0.0.1 at 2010-02-17 13:10:37) [GET]
+  [4;36;1mSong Load (0.5ms)[0m   [0;1mSELECT * FROM "songs" [0m
+Rendering template within layouts/client
+Rendering songs/manage
+Completed in 23ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/manage_songs]
+
+
+Processing SongsController#destroy (for 127.0.0.1 at 2010-02-17 13:10:41) [DELETE]
+  Parameters: {"authenticity_token"=>"Axn4skBLgCyIKfqcT+8IVE0vNY8/RhnQtmFZZebJcTo=", "id"=>"3"}
+  [4;35;1mSong Load (0.5ms)[0m   [0mSELECT * FROM "songs" WHERE ("songs"."id" = 3) [0m
+  [4;36;1mSong Destroy (0.2ms)[0m   [0;1mDELETE FROM "songs" WHERE "id" = 3[0m
+Redirected to http://0.0.0.0:3000/songs
+Completed in 195ms (DB: 1) | 302 Found [http://0.0.0.0/songs/3]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-02-17 13:10:42) [GET]
+  [4;35;1mSong Load (0.5ms)[0m   [0mSELECT * FROM "songs" [0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/songs]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-02-17 13:12:19) [GET]
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://0.0.0.0/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-02-17 13:22:08) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://0.0.0.0/posts]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-02-17 13:23:56) [GET]
+  [4;36;1mSong Load (0.5ms)[0m   [0;1mSELECT * FROM "songs" ORDER BY name DESC[0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/songs]
