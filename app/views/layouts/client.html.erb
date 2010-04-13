@@ -17,13 +17,16 @@
                 BARCODE CHANNEL
             </div>
             <div class="span-24 last nav_panel">
-              &nbsp;&nbsp;&nbsp;
+              <div class="left_offset">
               <%= link_to "HOME", posts_path, :class => "header_links" %> |
               <%= link_to "LISTEN", songs_path, :class => "header_links" %> |
-              DOWNLOAD | IMAGES | ABOUT THE BAND 
+              DOWNLOAD | IMAGES | ABOUT THE BAND
+              </div>
             </div>
-            <div class="span-19 ">
+            <div class="span-19">
+              <div class="left_offset">
                 <%= yield %>
+              </div>
             </div>
             <div class="span-5 last">
                 <div class="nav_item bottom_rounded top_rounded">

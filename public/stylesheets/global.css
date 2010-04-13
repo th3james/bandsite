@@ -24,24 +24,31 @@ a {
     font-size: 5em;
 }
 
+.left_offset {
+    padding-left: 15px;
+}
 .header_links {
     color: black;
 }
 
 .news_post {
-    padding-bottom: 10px;
-    margin-left: 1em;
+    margin-bottom: 20px;
+    border-top: solid 3px;
+    border-top-color: #85B931;
 }
 
 .post_title {
     padding-left: 5px;
     color: white;
-    font-size: 2em;
+    background: #3E3D42;
+    font-size: 24px;
 }
 
 .post_body {
-    padding-left: 5px;
+    padding: 5px;
     color: white;
+    background: #3E3D42;
+    font-size: 14px;
 }
 
 .nav_panel {
