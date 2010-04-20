@@ -20,7 +20,9 @@
               <div class="left_offset">
               <%= link_to "HOME", posts_path, :class => "header_links" %> |
               <%= link_to "LISTEN", songs_path, :class => "header_links" %> |
-              DOWNLOAD | IMAGES | ABOUT THE BAND
+              DOWNLOAD |
+              <%= link_to "IMAGES", photos_path, :class => "header_links" %> |
+              <%= link_to "ABOUT THE BAND", biography_path, :class => "header_links" %> |
               </div>
             </div>
             <div class="span-19">
@@ -30,7 +32,7 @@
             </div>
             <div class="span-5 last">
                 <div class="nav_item bottom_rounded top_rounded">
-                  <%= link_to "MEDIA PLAYER >>", media_player_path, :target => "_blank" %>
+                  <%= link_to "MEDIA PLAYER >>", songs_path, :target => "_blank" %>
                 </div>
             </div>
 	</div>

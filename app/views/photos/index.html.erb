@@ -1,0 +1,13 @@
+<h1>Image Channel</h1>
+
+<% @photos.each do |photo| %>
+  <div class="photo">
+    <%= photo.url %>
+    <%= link_to 'Show', photo %>
+  </div>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New photo', new_photo_path %>
