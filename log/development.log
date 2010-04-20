@@ -2051,3 +2051,283 @@ Processing StaticController#bio (for 127.0.0.1 at 2010-04-20 23:26:54) [GET]
 Rendering template within layouts/client
 Rendering static/bio
 Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/biography]
+
+
+Processing StaticController#bio (for 127.0.0.1 at 2010-04-20 23:52:51) [GET]
+Rendering template within layouts/client
+Rendering static/bio
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/biography]
+
+
+Processing StaticController#bio (for 127.0.0.1 at 2010-04-20 23:52:52) [GET]
+Rendering template within layouts/client
+Rendering static/bio
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/biography]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-04-20 23:52:53) [GET]
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM "photos" [0m
+Rendering template within layouts/client
+Rendering photos/index
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/photos]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-04-20 23:53:25) [GET]
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT * FROM "photos" [0m
+Rendering template within layouts/client
+Rendering photos/index
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/photos]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-20 23:53:26) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:22:25) [GET]
+Rendering template within layouts/client
+Rendering static/images
+
+ActionView::TemplateError (undefined method `images_tag' for #<ActionView::Base:0x1038460f8>) on line #7 of app/views/static/images.html.erb:
+4:   </div>
+5:   <div class="post_body">
+6:     <p>
+7:         <%= images_tag "Rob-Green-Small.JPG" %>
+8:     </p>
+9:   </div>
+10: </div>
+
+    app/views/static/images.html.erb:7
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (55.4ms)
+Rendered rescues/_request_and_response (11.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:22:38) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-21 00:22:39) [GET]
+
+ActionController::RoutingError (No route matches "/images/Rob-Green-Small.JPG" with {:method=>:get}):
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:22:49) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:23:26) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:24:28) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:25:10) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:26:50) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:26:51) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:26:58) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:26:59) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:26:59) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:27:23) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:27:46) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:28:05) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:28:55) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:29:17) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:29:46) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:30:15) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:30:49) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:31:10) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:31:38) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:31:53) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:32:06) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:32:17) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:32:58) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:33:16) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:34:13) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 36ms (View: 34, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:34:49) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:34:59) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:35:22) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-04-21 00:35:44) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-04-21 00:36:15) [GET]
+  [4;35;1mSong Load (0.7ms)[0m   [0mSELECT * FROM "songs" ORDER BY name DESC[0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 216ms (View: 69, DB: 1) | 200 OK [http://localhost/songs]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-04-21 00:36:17) [GET]
+  [4;36;1mSong Load (0.6ms)[0m   [0;1mSELECT * FROM "songs" ORDER BY name DESC[0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://localhost/songs]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-04-21 00:36:19) [GET]
+  [4;35;1mPost Load (0.8ms)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 92ms (View: 48, DB: 1) | 200 OK [http://localhost/posts]

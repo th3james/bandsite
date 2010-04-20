@@ -6,6 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   map.media_player "media_player", :controller => :songs, :action => :media_player
   map.manage_posts "manage_posts", :controller => :posts, :action => :manage
   map.manage_songs "manage_songs", :controller => :songs, :action => :manage
+  map.images "images", :controller => :static, :action => :images
   map.biography "biography", :controller => :static, :action => :bio
 
   map.resources :posts
