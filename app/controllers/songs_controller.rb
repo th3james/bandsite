@@ -1,6 +1,6 @@
 class SongsController < ApplicationController
   def index
-    @songs = Song.all :order => "name DESC"
+    @songs = Song.all :order => "order_int DESC"
   end
   
   def manage

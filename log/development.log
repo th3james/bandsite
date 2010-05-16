@@ -2331,3 +2331,595 @@ Processing PostsController#index (for 127.0.0.1 at 2010-04-21 00:36:19) [GET]
 Rendering template within layouts/client
 Rendering posts/index
 Completed in 92ms (View: 48, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-21 00:40:56) [GET]
+  Parameters: {"1271805571"=>nil}
+
+ActionController::RoutingError (No route matches "/images/band/Mike-Green-Small.JPG" with {:method=>:get}):
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-21 00:41:11) [GET]
+  Parameters: {"1271805571"=>nil}
+
+ActionController::RoutingError (No route matches "/images/band/Mike-Green-Small.JPG" with {:method=>:get}):
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (7.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20091206211930)
+Migrating to CreateSongs (20091231172750)
+Migrating to CreateUsers (20100202190549)
+Migrating to ConvertSongParamToLongString (20100207163114)
+Migrating to CreatePhotos (20100413170207)
+Migrating to AddOrderToSongs (20100516173536)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "songs" ADD "order" integer[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100516173536')[0m
+  [4;35;1mSQL (3.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("photos")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("posts")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("songs")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-05-16 18:39:17) [GET]
+  [4;36;1mPost Load (1.2ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 336ms (View: 308, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-05-16 18:39:21) [GET]
+  [4;35;1mSong Load (0.7ms)[0m   [0mSELECT * FROM "songs" ORDER BY name DESC[0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 49ms (View: 26, DB: 1) | 200 OK [http://localhost/songs]
+
+
+Processing SongsController#manage (for 127.0.0.1 at 2010-05-16 18:39:30) [GET]
+  [4;36;1mSong Load (1.3ms)[0m   [0;1mSELECT * FROM "songs" [0m
+Rendering template within layouts/client
+Rendering songs/manage
+Completed in 60ms (View: 48, DB: 1) | 200 OK [http://localhost/manage_songs]
+
+
+Processing SongsController#new (for 127.0.0.1 at 2010-05-16 18:39:33) [GET]
+Rendering template within layouts/client
+Rendering songs/new
+Rendered songs/_form (6.7ms)
+Completed in 48ms (View: 39, DB: 0) | 200 OK [http://localhost/songs/new]
+
+
+Processing SongsController#create (for 127.0.0.1 at 2010-05-16 18:39:38) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"w/w+dsoSkPIr349mpS4m9XPa5FoU25dH1+8dcjPew5U=", "song"=>{"name"=>"ghasdk.n", "url"=>"hgjklah", "order"=>"hjbjbdk"}}
+WARNING: Can't mass-assign these protected attributes: order
+  [4;35;1mSong Create (0.6ms)[0m   [0mINSERT INTO "songs" ("name", "created_at", "updated_at", "url", "order") VALUES('ghasdk.n', '2010-05-16 17:39:38', '2010-05-16 17:39:38', 'hgjklah', NULL)[0m
+Redirected to http://localhost:3000/songs/4
+Completed in 19ms (DB: 1) | 302 Found [http://localhost/songs]
+
+
+Processing SongsController#show (for 127.0.0.1 at 2010-05-16 18:39:38) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mSong Load (0.0ms)[0m   [0;1mSQLite3::SQLException: near "order": syntax error: SELECT * FROM "songs" WHERE ("songs"."id" = 4) ORDER BY order DESC[0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: near "order": syntax error: SELECT * FROM "songs" WHERE ("songs"."id" = 4)  ORDER BY order DESC):
+  app/controllers/songs_controller.rb:11:in `show'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (74.9ms)
+Rendered rescues/_request_and_response (2.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SongsController#create (for 127.0.0.1 at 2010-05-16 18:39:46) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"w/w+dsoSkPIr349mpS4m9XPa5FoU25dH1+8dcjPew5U=", "song"=>{"name"=>"ghasdk.n", "url"=>"hgjklah", "order"=>"5"}}
+WARNING: Can't mass-assign these protected attributes: order
+  [4;35;1mSong Create (0.4ms)[0m   [0mINSERT INTO "songs" ("name", "created_at", "updated_at", "url", "order") VALUES('ghasdk.n', '2010-05-16 17:39:46', '2010-05-16 17:39:46', 'hgjklah', NULL)[0m
+Redirected to http://localhost:3000/songs/5
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/songs]
+
+
+Processing SongsController#show (for 127.0.0.1 at 2010-05-16 18:39:46) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mSong Load (0.0ms)[0m   [0;1mSQLite3::SQLException: near "order": syntax error: SELECT * FROM "songs" WHERE ("songs"."id" = 5) ORDER BY order DESC[0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: near "order": syntax error: SELECT * FROM "songs" WHERE ("songs"."id" = 5)  ORDER BY order DESC):
+  app/controllers/songs_controller.rb:11:in `show'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (72.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20091206211930)
+Migrating to CreateSongs (20091231172750)
+Migrating to CreateUsers (20100202190549)
+Migrating to ConvertSongParamToLongString (20100207163114)
+Migrating to CreatePhotos (20100413170207)
+Migrating to AddOrderToSongs (20100516173536)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("photos")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("posts")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("songs")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing SongsController#create (for 127.0.0.1 at 2010-05-16 18:40:04) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"w/w+dsoSkPIr349mpS4m9XPa5FoU25dH1+8dcjPew5U=", "song"=>{"name"=>"ghasdk.n", "url"=>"hgjklah", "order"=>"5"}}
+WARNING: Can't mass-assign these protected attributes: order
+  [4;35;1mSong Create (0.6ms)[0m   [0mINSERT INTO "songs" ("name", "created_at", "updated_at", "url", "order") VALUES('ghasdk.n', '2010-05-16 17:40:04', '2010-05-16 17:40:04', 'hgjklah', NULL)[0m
+Redirected to http://localhost:3000/songs/6
+Completed in 14ms (DB: 1) | 302 Found [http://localhost/songs]
+
+
+Processing SongsController#show (for 127.0.0.1 at 2010-05-16 18:40:04) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mSong Load (0.0ms)[0m   [0;1mSQLite3::SQLException: near "order": syntax error: SELECT * FROM "songs" WHERE ("songs"."id" = 6) ORDER BY order DESC[0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: near "order": syntax error: SELECT * FROM "songs" WHERE ("songs"."id" = 6)  ORDER BY order DESC):
+  app/controllers/songs_controller.rb:11:in `show'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (171.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-05-16 18:40:14) [GET]
+  [4;35;1mSong Load (1.1ms)[0m   [0mSELECT * FROM "songs" ORDER BY name DESC[0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://localhost/songs]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-05-16 18:40:23) [GET]
+  [4;36;1mSong Load (1.0ms)[0m   [0;1mSELECT * FROM "songs" ORDER BY name DESC[0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 16ms (View: 6, DB: 1) | 200 OK [http://localhost/songs]
+
+
+Processing SongsController#manage (for 127.0.0.1 at 2010-05-16 18:40:29) [GET]
+  [4;35;1mSong Load (1.0ms)[0m   [0mSELECT * FROM "songs" [0m
+Rendering template within layouts/client
+Rendering songs/manage
+Completed in 40ms (View: 33, DB: 1) | 200 OK [http://localhost/manage_songs]
+
+
+Processing SongsController#destroy (for 127.0.0.1 at 2010-05-16 18:40:32) [DELETE]
+  Parameters: {"authenticity_token"=>"w/w+dsoSkPIr349mpS4m9XPa5FoU25dH1+8dcjPew5U=", "id"=>"5"}
+  [4;36;1mSong Load (0.3ms)[0m   [0;1mSELECT * FROM "songs" WHERE ("songs"."id" = 5) [0m
+  [4;35;1mSong Destroy (0.4ms)[0m   [0mDELETE FROM "songs" WHERE "id" = 5[0m
+Redirected to http://localhost:3000/songs
+Completed in 12ms (DB: 1) | 302 Found [http://localhost/songs/5]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-05-16 18:40:32) [GET]
+  [4;36;1mSong Load (0.9ms)[0m   [0;1mSELECT * FROM "songs" ORDER BY name DESC[0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://localhost/songs]
+
+
+Processing SongsController#manage (for 127.0.0.1 at 2010-05-16 18:41:09) [GET]
+  [4;35;1mSong Load (0.9ms)[0m   [0mSELECT * FROM "songs" [0m
+Rendering template within layouts/client
+Rendering songs/manage
+Completed in 49ms (View: 43, DB: 1) | 200 OK [http://localhost/manage_songs]
+
+
+Processing SongsController#destroy (for 127.0.0.1 at 2010-05-16 18:41:15) [DELETE]
+  Parameters: {"authenticity_token"=>"w/w+dsoSkPIr349mpS4m9XPa5FoU25dH1+8dcjPew5U=", "id"=>"4"}
+  [4;36;1mSong Load (0.3ms)[0m   [0;1mSELECT * FROM "songs" WHERE ("songs"."id" = 4) [0m
+  [4;35;1mSong Destroy (0.4ms)[0m   [0mDELETE FROM "songs" WHERE "id" = 4[0m
+Redirected to http://localhost:3000/songs
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/songs/4]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-05-16 18:41:15) [GET]
+  [4;36;1mSong Load (0.8ms)[0m   [0;1mSELECT * FROM "songs" ORDER BY name DESC[0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 18ms (View: 9, DB: 1) | 200 OK [http://localhost/songs]
+
+
+Processing SongsController#edit (for 127.0.0.1 at 2010-05-16 18:41:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSong Load (0.3ms)[0m   [0mSELECT * FROM "songs" WHERE ("songs"."id" = 1) [0m
+Rendering template within layouts/client
+Rendering songs/edit
+Rendered songs/_form (12.5ms)
+Completed in 55ms (View: 46, DB: 0) | 200 OK [http://localhost/songs/1/edit]
+
+
+Processing SongsController#update (for 127.0.0.1 at 2010-05-16 18:41:22) [PUT]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"w/w+dsoSkPIr349mpS4m9XPa5FoU25dH1+8dcjPew5U=", "id"=>"1", "song"=>{"name"=>"Ash Used Escape Rope", "url"=>"<object height=\"81\" width=\"100%\"> <param name=\"movie\" value=\"http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fsoundcloud.com%2Fbarcode-channel%2Fash-used-escape-rope\"></param> <param name=\"allowscriptaccess\" value=\"always\"></param> <embed allowscriptaccess=\"always\" height=\"81\" src=\"http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fsoundcloud.com%2Fbarcode-channel%2Fash-used-escape-rope\" type=\"application/x-shockwave-flash\" width=\"100%\"></embed> </object>  <span><a href=\"http://soundcloud.com/barcode-channel/ash-used-escape-rope\">Ash Used Escape Rope</a>  by  <a href=\"http://soundcloud.com/barcode-channel\">Barcode Channel</a></span> ", "order"=>"5"}}
+  [4;36;1mSong Load (0.3ms)[0m   [0;1mSELECT * FROM "songs" WHERE ("songs"."id" = 1) [0m
+WARNING: Can't mass-assign these protected attributes: order
+Redirected to http://localhost:3000/songs/1
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/songs/1]
+
+
+Processing SongsController#show (for 127.0.0.1 at 2010-05-16 18:41:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSong Load (0.0ms)[0m   [0mSQLite3::SQLException: near "order": syntax error: SELECT * FROM "songs" WHERE ("songs"."id" = 1) ORDER BY order DESC[0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: near "order": syntax error: SELECT * FROM "songs" WHERE ("songs"."id" = 1)  ORDER BY order DESC):
+  app/controllers/songs_controller.rb:11:in `show'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (170.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSong Load (0.9ms)[0m   [0;1mSELECT * FROM "songs" LIMIT 1[0m
+  [4;35;1mSong Load (0.4ms)[0m   [0mSELECT * FROM "songs" LIMIT 1[0m
+  [4;36;1mSong Update (0.6ms)[0m   [0;1mUPDATE "songs" SET "updated_at" = '2010-05-16 17:42:58', "order" = 1 WHERE "id" = 1[0m
+
+
+Processing SongsController#edit (for 127.0.0.1 at 2010-05-16 18:43:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSong Load (0.4ms)[0m   [0;1mSELECT * FROM "songs" WHERE ("songs"."id" = 1) [0m
+Rendering template within layouts/client
+Rendering songs/edit
+Rendered songs/_form (17.5ms)
+Completed in 32ms (View: 23, DB: 0) | 200 OK [http://localhost/songs/1/edit]
+
+
+Processing SongsController#edit (for 127.0.0.1 at 2010-05-16 18:43:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSong Load (0.3ms)[0m   [0mSELECT * FROM "songs" WHERE ("songs"."id" = 1) [0m
+Rendering template within layouts/client
+Rendering songs/edit
+Rendered songs/_form (15.3ms)
+Completed in 28ms (View: 20, DB: 0) | 200 OK [http://localhost/songs/1/edit]
+  [4;35;1mSong Update (0.4ms)[0m   [0mUPDATE "songs" SET "updated_at" = '2010-05-16 17:43:13', "order" = 5 WHERE "id" = 1[0m
+
+
+Processing SongsController#edit (for 127.0.0.1 at 2010-05-16 18:43:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSong Load (0.3ms)[0m   [0;1mSELECT * FROM "songs" WHERE ("songs"."id" = 1) [0m
+Rendering template within layouts/client
+Rendering songs/edit
+Rendered songs/_form (21.2ms)
+Completed in 34ms (View: 26, DB: 0) | 200 OK [http://localhost/songs/1/edit]
+
+
+Processing SongsController#update (for 127.0.0.1 at 2010-05-16 18:43:19) [PUT]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"w/w+dsoSkPIr349mpS4m9XPa5FoU25dH1+8dcjPew5U=", "id"=>"1", "song"=>{"name"=>"Ash Used Escape Rope", "url"=>"<object height=\"81\" width=\"100%\"> <param name=\"movie\" value=\"http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fsoundcloud.com%2Fbarcode-channel%2Fash-used-escape-rope\"></param> <param name=\"allowscriptaccess\" value=\"always\"></param> <embed allowscriptaccess=\"always\" height=\"81\" src=\"http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fsoundcloud.com%2Fbarcode-channel%2Fash-used-escape-rope\" type=\"application/x-shockwave-flash\" width=\"100%\"></embed> </object>  <span><a href=\"http://soundcloud.com/barcode-channel/ash-used-escape-rope\">Ash Used Escape Rope</a>  by  <a href=\"http://soundcloud.com/barcode-channel\">Barcode Channel</a></span> ", "order"=>"6"}}
+  [4;35;1mSong Load (0.3ms)[0m   [0mSELECT * FROM "songs" WHERE ("songs"."id" = 1) [0m
+WARNING: Can't mass-assign these protected attributes: order
+Redirected to http://localhost:3000/songs/1
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/songs/1]
+
+
+Processing SongsController#show (for 127.0.0.1 at 2010-05-16 18:43:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSong Load (0.0ms)[0m   [0;1mSQLite3::SQLException: near "order": syntax error: SELECT * FROM "songs" WHERE ("songs"."id" = 1) ORDER BY order DESC[0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: near "order": syntax error: SELECT * FROM "songs" WHERE ("songs"."id" = 1)  ORDER BY order DESC):
+  app/controllers/songs_controller.rb:11:in `show'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (159.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SongsController#show (for 127.0.0.1 at 2010-05-16 18:43:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSong Load (0.4ms)[0m   [0mSELECT * FROM "songs" WHERE ("songs"."id" = 1) [0m
+Rendering template within layouts/client
+Rendering songs/show
+Completed in 47ms (View: 37, DB: 0) | 200 OK [http://localhost/songs/1]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-05-16 18:43:53) [GET]
+  [4;36;1mSong Load (0.0ms)[0m   [0;1mSQLite3::SQLException: near "order": syntax error: SELECT * FROM "songs" ORDER BY order DESC[0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: near "order": syntax error: SELECT * FROM "songs"  ORDER BY order DESC):
+  app/controllers/songs_controller.rb:3:in `index'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /opt/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /opt/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (168.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSong Load (0.0ms)[0m   [0;1mSQLite3::SQLException: near "order": syntax error: SELECT * FROM "songs" ORDER BY order DESC[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20091206211930)
+Migrating to CreateSongs (20091231172750)
+Migrating to CreateUsers (20100202190549)
+Migrating to ConvertSongParamToLongString (20100207163114)
+Migrating to CreatePhotos (20100413170207)
+Migrating to AddOrderToSongs (20100516173536)
+Migrating to RenameSongOrderField (20100516174458)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCREATE TEMPORARY TABLE "altered_songs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "url" text(255), "created_at" datetime, "updated_at" datetime, "order_int" integer) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("songs")[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mDROP TABLE "songs"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "songs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "url" text(255), "created_at" datetime, "updated_at" datetime, "order_int" integer) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_songs")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mDROP TABLE "altered_songs"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100516174458')[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("photos")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("posts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("songs")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-05-16 18:47:08) [GET]
+  [4;35;1mSong Load (1.7ms)[0m   [0mSELECT * FROM "songs" ORDER BY order_int DESC[0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 15ms (View: 7, DB: 2) | 200 OK [http://localhost/songs]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-05-16 18:47:09) [GET]
+  [4;36;1mSong Load (0.7ms)[0m   [0;1mSELECT * FROM "songs" ORDER BY order_int DESC[0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/songs]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-05-16 18:47:11) [GET]
+  [4;35;1mSong Load (1.1ms)[0m   [0mSELECT * FROM "songs" ORDER BY order_int DESC[0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 14ms (View: 7, DB: 1) | 200 OK [http://localhost/songs]
+
+
+Processing SongsController#manage (for 127.0.0.1 at 2010-05-16 18:47:16) [GET]
+  [4;36;1mSong Load (1.7ms)[0m   [0;1mSELECT * FROM "songs" [0m
+Rendering template within layouts/client
+Rendering songs/manage
+Completed in 46ms (View: 37, DB: 2) | 200 OK [http://localhost/manage_songs]
+
+
+Processing SongsController#edit (for 127.0.0.1 at 2010-05-16 18:47:19) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSong Load (0.3ms)[0m   [0mSELECT * FROM "songs" WHERE ("songs"."id" = 6) [0m
+Rendering template within layouts/client
+Rendering songs/edit
+Rendered songs/_form (7.9ms)
+Completed in 28ms (View: 19, DB: 0) | 200 OK [http://localhost/songs/6/edit]
+
+
+Processing SongsController#update (for 127.0.0.1 at 2010-05-16 18:47:25) [PUT]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"w/w+dsoSkPIr349mpS4m9XPa5FoU25dH1+8dcjPew5U=", "id"=>"6", "song"=>{"name"=>"ghasdk.n", "url"=>"hgjklah", "order_int"=>"9001"}}
+  [4;36;1mSong Load (0.4ms)[0m   [0;1mSELECT * FROM "songs" WHERE ("songs"."id" = 6) [0m
+WARNING: Can't mass-assign these protected attributes: order_int
+Redirected to http://localhost:3000/songs/6
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/songs/6]
+
+
+Processing SongsController#show (for 127.0.0.1 at 2010-05-16 18:47:25) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSong Load (0.6ms)[0m   [0mSELECT * FROM "songs" WHERE ("songs"."id" = 6) [0m
+Rendering template within layouts/client
+Rendering songs/show
+Completed in 27ms (View: 15, DB: 1) | 200 OK [http://localhost/songs/6]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-05-16 18:47:26) [GET]
+  [4;36;1mSong Load (0.8ms)[0m   [0;1mSELECT * FROM "songs" ORDER BY order_int DESC[0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 14ms (View: 6, DB: 1) | 200 OK [http://localhost/songs]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-05-16 18:47:29) [GET]
+  [4;35;1mSong Load (1.0ms)[0m   [0mSELECT * FROM "songs" ORDER BY order_int DESC[0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://localhost/songs]
+
+
+Processing SongsController#manage (for 127.0.0.1 at 2010-05-16 18:47:36) [GET]
+  [4;36;1mSong Load (0.8ms)[0m   [0;1mSELECT * FROM "songs" [0m
+Rendering template within layouts/client
+Rendering songs/manage
+Completed in 37ms (View: 25, DB: 1) | 200 OK [http://localhost/manage_songs]
+
+
+Processing SongsController#edit (for 127.0.0.1 at 2010-05-16 18:47:38) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSong Load (0.5ms)[0m   [0mSELECT * FROM "songs" WHERE ("songs"."id" = 6) [0m
+Rendering template within layouts/client
+Rendering songs/edit
+Rendered songs/_form (7.7ms)
+Completed in 113ms (View: 14, DB: 1) | 200 OK [http://localhost/songs/6/edit]
+
+
+Processing SongsController#edit (for 127.0.0.1 at 2010-05-16 18:48:12) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mSong Load (0.4ms)[0m   [0;1mSELECT * FROM "songs" WHERE ("songs"."id" = 6) [0m
+Rendering template within layouts/client
+Rendering songs/edit
+Rendered songs/_form (7.4ms)
+Completed in 20ms (View: 12, DB: 0) | 200 OK [http://localhost/songs/6/edit]
+
+
+Processing SongsController#update (for 127.0.0.1 at 2010-05-16 18:48:16) [PUT]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"w/w+dsoSkPIr349mpS4m9XPa5FoU25dH1+8dcjPew5U=", "id"=>"6", "song"=>{"name"=>"ghasdk.n", "url"=>"hgjklah", "order_int"=>"9001"}}
+  [4;35;1mSong Load (0.5ms)[0m   [0mSELECT * FROM "songs" WHERE ("songs"."id" = 6) [0m
+WARNING: Can't mass-assign these protected attributes: order_int
+WARNING: Can't mass-assign these protected attributes: order_int
+WARNING: Can't mass-assign these protected attributes: order_int
+  [4;36;1mSong Update (32.0ms)[0m   [0;1mUPDATE "songs" SET "updated_at" = '2010-05-16 17:52:41', "order_int" = 9001 WHERE "id" = 6[0m
+Redirected to http://localhost:3000/songs/6
+Completed in 266874ms (DB: 32) | 302 Found [http://localhost/songs/6]
+
+
+Processing SongsController#update (for 127.0.0.1 at 2010-05-16 18:52:43) [PUT]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"w/w+dsoSkPIr349mpS4m9XPa5FoU25dH1+8dcjPew5U=", "id"=>"6", "song"=>{"name"=>"ghasdk.n", "url"=>"hgjklah", "order_int"=>"9001"}}
+  [4;35;1mSong Load (0.5ms)[0m   [0mSELECT * FROM "songs" WHERE ("songs"."id" = 6) [0m
+WARNING: Can't mass-assign these protected attributes: order_int
+Redirected to http://localhost:3000/songs/6
+Completed in 4204ms (DB: 0) | 302 Found [http://localhost/songs/6]
+
+
+Processing SongsController#show (for 127.0.0.1 at 2010-05-16 18:52:47) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mSong Load (0.5ms)[0m   [0;1mSELECT * FROM "songs" WHERE ("songs"."id" = 6) [0m
+Rendering template within layouts/client
+Rendering songs/show
+Completed in 33ms (View: 19, DB: 0) | 200 OK [http://localhost/songs/6]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-05-16 18:53:01) [GET]
+  [4;35;1mSong Load (0.8ms)[0m   [0mSELECT * FROM "songs" ORDER BY order_int DESC[0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 14ms (View: 6, DB: 1) | 200 OK [http://localhost/songs]
+
+
+Processing SongsController#manage (for 127.0.0.1 at 2010-05-16 18:53:08) [GET]
+  [4;36;1mSong Load (1.7ms)[0m   [0;1mSELECT * FROM "songs" [0m
+Rendering template within layouts/client
+Rendering songs/manage
+Completed in 35ms (View: 27, DB: 2) | 200 OK [http://localhost/manage_songs]
+
+
+Processing SongsController#edit (for 127.0.0.1 at 2010-05-16 18:53:10) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSong Load (0.6ms)[0m   [0mSELECT * FROM "songs" WHERE ("songs"."id" = 6) [0m
+Rendering template within layouts/client
+Rendering songs/edit
+Rendered songs/_form (8.5ms)
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://localhost/songs/6/edit]
+
+
+Processing SongsController#update (for 127.0.0.1 at 2010-05-16 18:53:13) [PUT]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"w/w+dsoSkPIr349mpS4m9XPa5FoU25dH1+8dcjPew5U=", "id"=>"6", "song"=>{"name"=>"ghasdk.n", "url"=>"hgjklah", "order_int"=>"900"}}
+  [4;36;1mSong Load (0.3ms)[0m   [0;1mSELECT * FROM "songs" WHERE ("songs"."id" = 6) [0m
+WARNING: Can't mass-assign these protected attributes: order_int
+Redirected to http://localhost:3000/songs/6
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/songs/6]
+
+
+Processing SongsController#show (for 127.0.0.1 at 2010-05-16 18:53:13) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSong Load (0.5ms)[0m   [0mSELECT * FROM "songs" WHERE ("songs"."id" = 6) [0m
+Rendering template within layouts/client
+Rendering songs/show
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://localhost/songs/6]
+
+
+Processing SongsController#manage (for 127.0.0.1 at 2010-05-16 18:53:18) [GET]
+  [4;36;1mSong Load (0.8ms)[0m   [0;1mSELECT * FROM "songs" [0m
+Rendering template within layouts/client
+Rendering songs/manage
+Completed in 28ms (View: 21, DB: 1) | 200 OK [http://localhost/manage_songs]
