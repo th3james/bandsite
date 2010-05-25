@@ -2923,3 +2923,57 @@ Processing SongsController#manage (for 127.0.0.1 at 2010-05-16 18:53:18) [GET]
 Rendering template within layouts/client
 Rendering songs/manage
 Completed in 28ms (View: 21, DB: 1) | 200 OK [http://localhost/manage_songs]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-05-25 20:01:12) [GET]
+  [4;36;1mPost Load (20.6ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 251ms (View: 201, DB: 21) | 200 OK [http://localhost/posts]
+
+
+Processing StaticController#bio (for 127.0.0.1 at 2010-05-25 20:01:14) [GET]
+Rendering template within layouts/client
+Rendering static/bio
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/biography]
+
+
+Processing StaticController#images (for 127.0.0.1 at 2010-05-25 20:03:05) [GET]
+Rendering template within layouts/client
+Rendering static/images
+Completed in 31ms (View: 29, DB: 0) | 200 OK [http://localhost/images]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-05-25 20:03:16) [GET]
+  [4;35;1mSong Load (16.6ms)[0m   [0mSELECT * FROM "songs" ORDER BY order_int DESC[0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 62ms (View: 23, DB: 17) | 200 OK [http://localhost/songs]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-05-25 20:03:19) [GET]
+  [4;36;1mPost Load (0.7ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/client
+Rendering posts/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-05-25 20:31:34) [GET]
+  [4;35;1mSong Load (1.5ms)[0m   [0mSELECT * FROM "songs" ORDER BY order_int DESC[0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 32ms (View: 17, DB: 1) | 200 OK [http://localhost/songs]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-05-25 20:31:56) [GET]
+  [4;36;1mSong Load (0.8ms)[0m   [0;1mSELECT * FROM "songs" ORDER BY order_int DESC[0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 31ms (View: 17, DB: 1) | 200 OK [http://localhost/songs]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-05-25 20:32:31) [GET]
+  [4;35;1mSong Load (1.7ms)[0m   [0mSELECT * FROM "songs" ORDER BY order_int DESC[0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 26ms (View: 18, DB: 2) | 200 OK [http://localhost/songs]
