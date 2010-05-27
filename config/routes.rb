@@ -3,9 +3,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.root :controller=>:posts, :action=>:index
 
-  map.media_player "media_player", :controller => :songs, :action => :media_player
-  map.manage_posts "manage_posts", :controller => :posts, :action => :manage
-  map.manage_songs "manage_songs", :controller => :songs, :action => :manage
+  map.login 'login', :controller => :user_sessions, :action => :new
+  map.logout 'logout', :controller => :user_sessions, :action => :destroy
   map.images "images", :controller => :static, :action => :images
   map.biography "biography", :controller => :static, :action => :bio
 
@@ -13,6 +12,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :songs
   map.resources :photos
   map.resources :users
+  map.resources :user_sessions
 
   # The priority is based upon order of creation: first created -> highest priority.
 

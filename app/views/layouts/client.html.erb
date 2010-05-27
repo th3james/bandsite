@@ -1,39 +1,44 @@
 <html>
-  <head>
-	<title>
-		Barcode Channel
-	</title>
-	<link rel="stylesheet" href="/stylesheets/blueprint/screen.css" type="text/css" media="screen, projection">
-	<link rel="stylesheet" href="/stylesheets/blueprint/print.css" type="text/css" media="print">
-	<!--[if lt IE 8]>
-	  <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
-	<![endif]-->
-	<%= stylesheet_link_tag 'global', 'formtastic', 'formtastic_changes' %>
-  </head>
-  <body class="container">
-	<div class="span-24 last page_frame">
-            <div class="span-23 append-1 last header">
-              <%= image_tag 'logo.png', :alt => 'Barcode Channel' %>
-                BARCODE CHANNEL
-            </div>
-            <div class="span-24 last nav_panel">
-              <div class="left_offset">
-              <%= link_to "HOME", posts_path, :class => "header_links" %> |
-              <%= link_to "LISTEN", songs_path, :class => "header_links" %> |
-              <%= link_to "IMAGES", images_path, :class => "header_links" %> |
-              <%= link_to "ABOUT THE BAND", biography_path, :class => "header_links" %> |
-              </div>
-            </div>
-            <div class="span-19">
-              <div class="left_offset">
-                <%= yield %>
-              </div>
-            </div>
-            <div class="span-5 last">
-                <div class="nav_item bottom_rounded top_rounded">
-                  <%= link_to "MEDIA PLAYER >>", songs_path, :target => "_blank" %>
-                </div>
-            </div>
-	</div>
-  </body>
+<head>
+  <title>
+    Barcode Channel
+  </title>
+  <link rel="stylesheet" href="/stylesheets/blueprint/screen.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" href="/stylesheets/blueprint/print.css" type="text/css" media="print">
+  <!--[if lt IE 8]>
+      <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
+    <![endif]-->
+  <%= stylesheet_link_tag 'global', 'formtastic', 'formtastic_changes' %>
+</head>
+<body class="container">
+<div class="span-24 last page_frame">
+  <div class="span-23 append-1 last header">
+    <%= image_tag 'logo.png', :alt => 'Barcode Channel' %>
+    BARCODE CHANNEL
+  </div>
+  <div class="span-24 last nav_panel">
+    <div class="left_offset">
+      <%= link_to "HOME", posts_path, :class => "header_links" %> |
+      <%= link_to "LISTEN", songs_path, :class => "header_links" %> |
+      <%= link_to "IMAGES", images_path, :class => "header_links" %> |
+      <%= link_to "ABOUT THE BAND", biography_path, :class => "header_links" %> |
+      <% if current_user %>
+          <%= link_to 'Logout, yeah?', logout_path, :class => "header_links"%>
+      <% end %>
+    </div>
+  </div>
+  <div class="span-19">
+    <div  class="left_offset" style="color: green; float: none"><%= flash[:notice] %></div>
+    <div  class="left_offset" style="background-color: yellow; float: none"><%= flash[:warning] %></div>
+    <div class="left_offset">
+      <%= yield %>
+    </div>
+  </div>
+  <div class="span-5 last">
+    <div class="nav_item bottom_rounded top_rounded">
+      <%= link_to "MEDIA PLAYER >>", songs_path, :target => "_blank" %>
+    </div>
+  </div>
+</div>
+</body>
 </html>
