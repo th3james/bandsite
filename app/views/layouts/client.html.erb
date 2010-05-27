@@ -27,7 +27,7 @@
       <% end %>
     </div>
   </div>
-  <div class="span-19">
+  <div class="span-18">
     <div  class="left_offset" style="color: green; float: none"><%= flash[:notice] %></div>
     <div  class="left_offset" style="background-color: yellow; float: none"><%= flash[:warning] %></div>
     <div  class="left_offset" style="background-color: red; float: none"><%= flash[:error] %></div>
@@ -35,10 +35,51 @@
       <%= yield %>
     </div>
   </div>
-  <div class="span-5 last">
-    <div class="nav_item bottom_rounded top_rounded">
-      <%= link_to "MEDIA PLAYER >>", songs_path, :target => "_blank" %>
+  <div class="span-6 last">
+    <div class="side_panel bottom_rounded, top_rounded">
+      <div class="side_panel_title">Stuff</div>
+      <div class="nav_item bottom_rounded top_rounded">
+        <%= link_to "Current Recordings >>", songs_path %>
+      </div>
+      <div class="nav_item bottom_rounded top_rounded">
+        <%= link_to "Facebook >>", "http://www.facebook.com/pages/Barcode-Channel/126967277330061", :target => "_blank" %>
+      </div>
+      <div class="nav_item bottom_rounded top_rounded">
+        <%= link_to "Myspace >>", "http://myspace.com/barcodechannel", :target => "_blank" %>
+      </div>
     </div>
+
+    <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+    <script>
+        new TWTR.Widget({
+            version: 2,
+            type: 'profile',
+            rpp: 4,
+            interval: 6000,
+            width: 205,
+            height: 300,
+            theme: {
+                shell: {
+                    background: '#333333',
+                    color: '#ffffff'
+                },
+                tweets: {
+                    background: '#85b931',
+                    color: '#ffffff',
+                    links: '#000000'
+                }
+            },
+            features: {
+                scrollbar: false,
+                loop: false,
+                live: false,
+                hashtags: true,
+                timestamp: true,
+                avatars: false,
+                behavior: 'all'
+            }
+        }).render().setUser('BarcodeChannel').start();
+    </script>
   </div>
 </div>
 </body>

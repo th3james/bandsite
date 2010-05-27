@@ -58,12 +58,24 @@ a {
     margin-bottom: 1em;
 }
 
+.side_panel {
+    background-color: #333333;
+    width: 205px;
+    color: white;
+    font-size: 22px;
+}
+
+.side_panel_title {
+    padding-left: 8px;
+}
+
 .nav_item {
     background-color: #85B931;
-    padding-left: 5px;
-    font-size: 2em;
-    margin-right: 1em;
+    padding: 6px 8px;
+    font-size: 16px;
+    margin-bottom: 3px;
 }
+
 .active_nav_item {
     background-color: #85B931;
     color: white;
