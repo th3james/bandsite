@@ -2,10 +2,16 @@
     A collection of our current demos
 </div>
 
+<% if can? :new, Song %>
+    <%= link_to "Add a new song", new_song_path %>
+<% end %>
 <% for song in @songs %>
   <div class="news_post">
     <div class="post_title">
       <%=h song.name %>
+      <% if can? :edit, song %>
+          <%= link_to "|Edit|", edit_song_path(song) %>
+      <% end %>
     </div>
     <div class="post_body">
       <%= song.url %>

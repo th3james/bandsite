@@ -1,10 +1,8 @@
 class SongsController < ApplicationController
+  load_and_authorize_resource
+  
   def index
     @songs = Song.all :order => "order_int DESC"
-  end
-  
-  def manage
-    @songs = Song.all
   end
   
   def show

@@ -2,3 +2,4 @@
   thoughtbot-factory_girl -s "http://gems.github.com"
   authlogic -s "http://gems.github.com"
   formtastic -s "http://gems.github.com"
+  cancan -s "http://gems.github.com"

@@ -1,7 +1,13 @@
+<% if can? :new, Post %>
+    <%= link_to "Add a new newpost", new_post_path %>
+<% end %>
 <% for post in @posts %>
     <div class="news_post">
         <div class="post_title ">
           <%=h post.title %>
+          <% if can? :edit, post %>
+              <%= link_to "|Edit|", edit_post_path(post) %>
+          <% end %>
         </div>
         <div class="post_body ">
           <%=post.body %>
