@@ -4720,3 +4720,10 @@ Processing SongsController#index (for 127.0.0.1 at 2010-05-27 23:29:30) [GET]
 Rendering template within layouts/client
 Rendering songs/index
 Completed in 27ms (View: 9, DB: 0) | 200 OK [http://localhost/songs]
+
+
+Processing SongsController#index (for 127.0.0.1 at 2010-05-27 23:32:49) [GET]
+  [4;36;1mSong Load (0.4ms)[0m   [0;1mSELECT * FROM "songs" ORDER BY order_int DESC[0m
+Rendering template within layouts/client
+Rendering songs/index
+Completed in 99ms (View: 81, DB: 0) | 200 OK [http://localhost/songs]
