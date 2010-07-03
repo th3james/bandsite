@@ -2,8 +2,7 @@
 
 <% @photos.each do |photo| %>
   <div class="photo">
-    <%= photo.url %>
-    <%= link_to 'Show', photo %>
+    <a href='<%= photo.url %>'><%= image_tag photo.thumbnail_url %></a>
   </div>
 <% end %>
 </table>
