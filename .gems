@@ -3,4 +3,4 @@
   authlogic -s "http://gems.github.com"
   formtastic -s "http://gems.github.com"
   cancan -s "http://gems.github.com"
-  rails -v 2.3.5
+  rails -v 2.3.8
