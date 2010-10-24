@@ -1,20 +1,22 @@
 
-<p>
-  <strong>Name:</strong>
-  <%=h @song.name %>
-</p>
-<p>
-  <strong>Url:</strong>
-  <%=h @song.url %>
-</p>
-<p>
-  <strong>Order:</strong>
-  <%=h @song.order_int %>
-</p>
+<div class="post_title">
+  <%= @song.name %>
+</div>
+
+<div class="post_body">
+  <%= @song.url.html_safe %>
+</div>
+
+  <% if can? :edit, @song %>
+    <p>
+      <strong>Order:</strong>
+      <%= @song.order_int %>
+    </p>
+  <% end %>
 
 <p>
 
-  <% if can? :edit, song %>
+  <% if can? :edit, @song %>
       <%= link_to "Edit", edit_song_path(@song) %> |
       <%= link_to "Destroy", @song, :confirm => 'Are you sure?', :method => :delete %> |
   <% end %>

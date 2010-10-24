@@ -10,7 +10,7 @@
           <% end %>
         </div>
         <div class="post_body ">
-          <%=post.body %>
+          <%= post.body.html_safe %>
           <%= link_to ">>", post_path(post) %>
           <br/>
         </div>
