@@ -9,9 +9,10 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem "thoughtbot-shoulda"
 gem "thoughtbot-factory_girl"
-gem "authlogic"
+gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
 gem "formtastic"
 gem "cancan"
+
 
 source "http://gems.github.com"
 source :rubygems
