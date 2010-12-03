@@ -17,7 +17,6 @@ gem "cancan"
 source "http://gems.github.com"
 source :rubygems
 
-
 # Use unicorn as the web server
 # gem 'unicorn'
 
