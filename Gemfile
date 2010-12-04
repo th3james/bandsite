@@ -7,12 +7,19 @@ gem 'rails', '3.0.1'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
-gem "thoughtbot-shoulda"
-gem "thoughtbot-factory_girl"
 gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
 gem "formtastic"
 gem "cancan"
 
+#testing
+gem "thoughtbot-shoulda"
+gem "thoughtbot-factory_girl"
+gem 'cucumber-rails'
+gem 'cucumber'
+gem 'rspec-rails'
+gem "webrat"
+gem "pickle"
+gem "capybara"
 
 source "http://gems.github.com"
 source :rubygems
