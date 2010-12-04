@@ -1,7 +1,6 @@
 <h1>Login</h1>
 <p>
   <%= semantic_form_for @user_session do |f| %>
-      <%= f.error_messages %>
       <%= f.inputs :username, :password %>
 
       <% f.buttons do %>
