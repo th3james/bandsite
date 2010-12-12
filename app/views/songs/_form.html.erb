@@ -1,5 +1,4 @@
 <%= form_for @song do |f| %>
-    <%= f.error_messages %>
     <p>
       <%= f.label :name %><br />
       <%= f.text_field :name %>
@@ -12,5 +11,5 @@
       <%= f.label :order_int %><br />
       <%= f.text_field :order_int %>
     </p>
-    <p><%= f.submit "Submit" %></p>
+    <p><%= f.submit "Update" %></p>
 <% end %>

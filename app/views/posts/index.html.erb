@@ -8,6 +8,9 @@
           <% if can? :edit, post %>
               <%= link_to "|Edit|", edit_post_path(post) %>
           <% end %>
+          <% if can? :delete, post %>
+              <%= link_to '|Delete|', post, :confirm => 'Are you sure?', :method => :delete %>
+          <% end %>
         </div>
         <div class="post_body ">
           <%= post.body.html_safe %>

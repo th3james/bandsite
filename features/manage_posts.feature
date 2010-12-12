@@ -62,3 +62,11 @@ Feature: Manage posts
     Then I should see "New Title"
     Then I should not see "Old title"
 
+  Scenario: Delete a post
+    Given I have no posts
+    And a post exists with title: "Post to delete"
+    And the admin user exists
+    And I am logged in as that user
+    When I go to the index page for posts
+    And I follow "Delete"
+    Then I should not see "Post to delete"

@@ -3,7 +3,7 @@
 </div>
 
 <% if can? :new, Song %>
-    <%= link_to "Add a new song", new_song_path %>
+    <%= link_to "New song", new_song_path %>
 <% end %>
 <% for song in @songs %>
   <div class="news_post">
@@ -11,6 +11,9 @@
       <%=h song.name %>
       <% if can? :edit, song %>
           <%= link_to "|Edit|", edit_song_path(song) %>
+      <% end %>
+      <% if can? :delete, song %>
+          <%= link_to '|Delete|', song, :confirm => 'Are you sure?', :method => :delete %>
       <% end %>
     </div>
     <div class="post_body">
