@@ -3,7 +3,7 @@
   <%= semantic_form_for @user_session do |f| %>
       <%= f.inputs :username, :password %>
 
-      <% f.buttons do %>
+      <%= f.buttons do %>
         <%= f.commit_button :label => "Login" %>
       <% end %>
   <% end %>

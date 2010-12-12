@@ -21,7 +21,12 @@ module NavigationHelpers
       "#{$1}"
       
     when /the show page for (.+)/  
-      polymorphic_path(model($1))  
+      model_name = $1
+      if /that .*/.match(model_name)
+        model_name = model_name.split('that ')[1]
+        model = model_name.camelize.constantize.last
+      end
+      polymorphic_path(model)  
 
     when /the index page for (.+)/  
       model_name = $1.gsub(' ', '_')
