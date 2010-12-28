@@ -76,6 +76,10 @@ a {
     margin-bottom: 3px;
 }
 
+.nav_item a{
+    color:white;
+}
+
 .active_nav_item {
     background-color: #85B931;
     color: white;
