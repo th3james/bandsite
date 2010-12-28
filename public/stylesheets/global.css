@@ -7,6 +7,10 @@ a {
     text-decoration: none;
 }
 
+p {
+    margin: 0px 0px 1em;
+}
+
 .header_links {
     color: white;
     text-decoration: none;
