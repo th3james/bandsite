@@ -12,7 +12,6 @@ Bandsite::Application.routes.draw do
   resources :photos
   resources :users
   resources :user_sessions
-  resources :photos
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
