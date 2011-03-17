@@ -30,43 +30,35 @@
     <%= image_tag 'banner.png', :alt => 'Barcode Channel' %>
   </div>
   <div class="span-24 last nav_panel">
-    <div class="left_offset">
-      <%= link_to "HOME", posts_path, :class => "header_links" %> |
-      <%= link_to "LISTEN", songs_path, :class => "header_links" %> |
-      <%= link_to "IMAGES", "http://www.flickr.com/photos/51843059@N06/", :class => "header_links" %> |
-      <%= link_to "ABOUT THE BAND", biography_path, :class => "header_links" %>
+    <ul class="menu left_offset">
+      <li><%= link_to "NEWS", posts_path %></li>
+      <li><%= link_to "LISTEN", songs_path %></li>
+      <li><%= link_to "IMAGES", "http://www.flickr.com/photos/51843059@N06/" %></li>
+      <li><%= link_to "ABOUT THE BAND", biography_path %></li>
       <% if current_user %>
-          | <%= link_to 'Subscribers', subscribers_path, :class => "header_links"%>
-          | <%= link_to 'Logout, yeah?', logout_path, :class => "header_links"%>
+        <li><%= link_to 'Subscribers', subscribers_path %></li>
+        <li><%= link_to 'Logout, yeah?', logout_path %></li>
       <% end %>
-    </div>
+    </ul>
   </div>
-  <div class="span-18">
-    <div  class="left_offset" style="color: green; float: none"><%= flash[:notice] %></div>
-    <div  class="left_offset" style="background-color: yellow; float: none"><%= flash[:warning] %></div>
-    <div  class="left_offset" style="background-color: red; float: none"><%= flash[:error] %></div>
-    <div class="left_offset">
+  <div class="span-18 main_content">
+    <div style="color: green; float: none"><%= flash[:notice] %></div>
+    <div style="background-color: yellow; float: none"><%= flash[:warning] %></div>
+    <div style="background-color: red; float: none"><%= flash[:error] %></div>
+    <div>
       <%= yield %>
     </div>
   </div>
   <div class="span-6 last">
     <div class="side_panel bottom_rounded, top_rounded">
-      <div class="side_panel_title">Stuff</div>
-      <div class="nav_item bottom_rounded top_rounded">
-        <%= link_to "Current Recordings >>", songs_path %>
-      </div>
-      <div class="nav_item bottom_rounded top_rounded">
-        <%= link_to "Facebook >>", "http://www.facebook.com/pages/Barcode-Channel/126967277330061", :target => "_blank" %>
-      </div>
-      <div class="nav_item bottom_rounded top_rounded">
-        <%= link_to "Myspace >>", "http://myspace.com/barcodechannel", :target => "_blank" %>
-      </div>
-      <div class="nav_item bottom_rounded top_rounded">
-        <%= link_to "Bandcamp >>", "http://barcodechannel.bandcamp.com/", :target => "_blank" %>
-      </div>
-      <div class="nav_item bottom_rounded top_rounded">
-        <%= link_to "Soundcloud >>", "http://soundcloud.com/barcode-channel", :target => "_blank" %>
-      </div>
+      <h4>Stuff</h4>
+      <ul class="side_nav">
+        <li><%= link_to "Current Recordings >>", songs_path %></li>
+        <li><%= link_to "Facebook >>", "http://www.facebook.com/pages/Barcode-Channel/126967277330061", :target => "_blank" %></li>
+        <li><%= link_to "Myspace >>", "http://myspace.com/barcodechannel", :target => "_blank" %></li>
+        <li><%= link_to "Bandcamp >>", "http://barcodechannel.bandcamp.com/", :target => "_blank" %></li>
+        <li><%= link_to "Soundcloud >>", "http://soundcloud.com/barcode-channel", :target => "_blank" %></li>
+      </ul>
     </div>
 
     <script src="http://widgets.twimg.com/j/2/widget.js"></script>
