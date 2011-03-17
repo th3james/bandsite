@@ -17,7 +17,6 @@ div.header_links {
 }
 
 div.page_frame {
-    height: 100%;
     background-color: #3E3D42;
 }
 
@@ -65,9 +64,14 @@ div.post_title {
 }
 
 div.post_title h2 {
-  font-size: 24px;
+  font-size: 20px;
   color: white;
   margin-bottom: 0px;
+}
+
+div.post_title h2 a {
+  color: white;
+  text-decoration: none;
 }
 
 div.post_body {

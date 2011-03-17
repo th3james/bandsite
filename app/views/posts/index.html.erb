@@ -4,7 +4,7 @@
 <% for post in @posts %>
   <div class="news_post">
     <div class="post_title ">
-      <h2><%=h post.title %></h2>
+      <h2><%=h link_to post.title, post %></h2>
       <% if can? :edit, post %>
         <%= link_to "|Edit|", edit_post_path(post) %>
       <% end %>
@@ -14,7 +14,6 @@
     </div>
     <div class="post_body ">
       <%= post.body.html_safe %>
-      <%= link_to ">>", post_path(post) %>
       <br/>
     </div>
   </div>

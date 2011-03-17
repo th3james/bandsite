@@ -8,7 +8,7 @@
 <% for song in @songs %>
   <div class="news_post">
     <div class="post_title">
-      <%=h song.name %>
+      <h2><%=h link_to song.name, song %></h2>
       <% if can? :edit, song %>
           <%= link_to "|Edit|", edit_song_path(song) %>
       <% end %>

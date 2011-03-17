@@ -1,10 +1,12 @@
 
-<div class="post_title">
-  <%= @song.name %>
-</div>
+<div class="news_post">
+  <div class="post_title">
+    <h2><%= link_to @song.name, @song %></h2>
+  </div>
 
-<div class="post_body">
-  <%= @song.url.html_safe %>
+  <div class="post_body">
+    <%= @song.url.html_safe %>
+  </div>
 </div>
 
   <% if can? :edit, @song %>
