@@ -1,5 +1,7 @@
 Bandsite::Application.routes.draw do
 
+  resources :subscribers
+
   root :to => "posts#index"
 
   match 'login' => 'user_sessions#new'

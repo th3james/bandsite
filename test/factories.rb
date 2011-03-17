@@ -8,3 +8,8 @@ Factory.define :post do |p|
   p.sequence(:title) { |n| "Post #{n}"}
   p.body "This is a test post"
 end
+
+Factory.define :subscriber do |p|
+  p.sequence(:name) { |n| "Subscriber #{n}"}
+  p.email "steve@hats.org"
+end

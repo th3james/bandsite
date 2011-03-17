@@ -34,9 +34,10 @@
       <%= link_to "HOME", posts_path, :class => "header_links" %> |
       <%= link_to "LISTEN", songs_path, :class => "header_links" %> |
       <%= link_to "IMAGES", "http://www.flickr.com/photos/51843059@N06/", :class => "header_links" %> |
-      <%= link_to "ABOUT THE BAND", biography_path, :class => "header_links" %> |
+      <%= link_to "ABOUT THE BAND", biography_path, :class => "header_links" %>
       <% if current_user %>
-          <%= link_to 'Logout, yeah?', logout_path, :class => "header_links"%>
+          | <%= link_to 'Subscribers', subscribers_path, :class => "header_links"%>
+          | <%= link_to 'Logout, yeah?', logout_path, :class => "header_links"%>
       <% end %>
     </div>
   </div>
