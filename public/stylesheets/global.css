@@ -120,6 +120,7 @@ ul.side_nav {
 
 ul.side_nav li {
   background-color: #85B931;
+  background: #CCC url(/images/button_bk.png) repeat-x 0% 0%;
   padding: 6px 8px;
   font-size: 16px;
   margin-bottom: 3px;
