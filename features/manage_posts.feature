@@ -70,3 +70,28 @@ Feature: Manage posts
     When I go to the index page for posts
     And I follow "Delete"
     Then I should not see "Post to delete"
+
+  Scenario: Posts should paginate to 5 per page
+    Given I have no posts
+    And a post exists with title: "Post 1"
+    And a post exists with title: "Post 2"
+    And a post exists with title: "Post 3"
+    And a post exists with title: "Post 4"
+    And a post exists with title: "Post 5"
+    And a post exists with title: "Post 6"
+    When I go to the index page for posts
+    Then I should not see "Post 1"
+    And I should see "Post 2"
+
+  Scenario: Posts should paginate to 5 per page
+    Given I have no posts
+    And a post exists with title: "Post 1"
+    And a post exists with title: "Post 2"
+    And a post exists with title: "Post 3"
+    And a post exists with title: "Post 4"
+    And a post exists with title: "Post 5"
+    And a post exists with title: "Post 6"
+    When I go to the index page for posts
+    And I follow "2"
+    Then I should see "Post 1"
+    And I should not see "Post 2"

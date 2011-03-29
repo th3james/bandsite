@@ -10,6 +10,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
 gem "formtastic"
 gem "cancan"
+gem "kaminari"  
+
 
 #testing
 gem "thoughtbot-shoulda"

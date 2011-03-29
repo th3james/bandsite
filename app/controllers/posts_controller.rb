@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   load_and_authorize_resource
   
   def index
-    @posts = Post.all :order => "created_at DESC"
+    @posts = Post.order("created_at DESC").page(params[:page]).per(5)
   end
   
   def new
