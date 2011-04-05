@@ -118,6 +118,7 @@ div.side_panel h4 {
 div.inset {
   border-left: 1px solid #666;
   padding-left:8px;
+  margin-bottom:10px;
 }
 
 div.inset p{
