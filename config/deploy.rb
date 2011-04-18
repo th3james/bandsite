@@ -10,7 +10,7 @@ role :db,  "77.235.60.163", :primary => true # This is where Rails migrations wi
 
 set :user, "th3james"
 set :use_sudo, true
-set :runner, :user
+set :runner, "th3james"
 set :port, 30000
 
 set :deploy_to, "/var/www/#{application}"
