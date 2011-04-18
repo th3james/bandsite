@@ -13,32 +13,32 @@
 ActiveRecord::Schema.define(:version => 20110317204551) do
 
   create_table "photos", :force => true do |t|
-    t.string    "title"
-    t.string    "url"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.string    "thumbnail_url"
+    t.string   "title"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "thumbnail_url"
   end
 
   create_table "posts", :force => true do |t|
-    t.string    "title"
-    t.text      "body"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "roles", :force => true do |t|
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.string    "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
   end
 
   create_table "songs", :force => true do |t|
-    t.string    "name"
-    t.text      "url"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.integer   "order_int"
+    t.string   "name"
+    t.text     "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "order_int"
   end
 
   create_table "subscribers", :force => true do |t|
@@ -49,14 +49,14 @@ ActiveRecord::Schema.define(:version => 20110317204551) do
   end
 
   create_table "users", :force => true do |t|
-    t.string    "username"
-    t.string    "email"
-    t.string    "crypted_password"
-    t.string    "password_salt"
-    t.string    "persistence_token"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.integer   "role_id"
+    t.string   "username"
+    t.string   "email"
+    t.string   "crypted_password"
+    t.string   "password_salt"
+    t.string   "persistence_token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "role_id"
   end
 
 end
