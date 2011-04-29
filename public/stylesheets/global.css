@@ -169,3 +169,27 @@ ul.side_nav li a {
     -webkit-border-bottom-left-radius: 5px;
     -webkit-border-bottom-right-radius: 5px;
 }
+
+#photo_list {
+  padding: 0;
+  margin: 0;
+}
+
+#photo_list li {
+  display:inline-block;
+  
+  width: 200px;
+  height: 200px;
+  padding: 5px;
+  margin-bottom: 5px;
+
+  background: #AAA;
+  border: solid 1px #666;
+  vertical-align: top;
+  text-align: center;
+  line-height: 200px;
+}
+
+#photo_show {
+  text-align: center;
+}
