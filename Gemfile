@@ -11,6 +11,8 @@ gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => '
 gem "formtastic"
 gem "cancan"
 gem "kaminari"  
+gem "carrierwave"
+gem "rmagick"  
 
 
 #testing
@@ -22,6 +24,8 @@ gem 'rspec-rails'
 gem "webrat"
 gem "pickle"
 gem "capybara"
+
+
 
 source "http://gems.github.com"
 source :rubygems

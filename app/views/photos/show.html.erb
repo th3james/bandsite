@@ -1,13 +1,8 @@
-<p>
-  <b>Title:</b>
-  <%=h @photo.title %>
-</p>
+<%= image_tag @photo.image_url(:big).to_s %>
 
 <p>
-  <b>String:</b>
-  <% image_tag @photo.thumbnail_url %>
+  <%=h @photo.notes %>
 </p>
-
 
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
 <%= link_to 'Back', photos_path %>

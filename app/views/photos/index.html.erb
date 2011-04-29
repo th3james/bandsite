@@ -1,12 +1,17 @@
-<h1>Image Channel</h1>
-
-<% @photos.each do |photo| %>
-  <div class="photo">
-    <a href='<%= photo.url %>'><%= image_tag photo.thumbnail_url %></a>
+<div class="news_post">
+  <div class="post_title">
+    <h2>Image Channel</h2>
   </div>
-<% end %>
-</table>
+  <div class="post_body">
+    <ul class="photo">
+      <% @photos.each do |photo| %>
+        <li><%= link_to image_tag(photo.image_url(:thumb).to_s), photo %></a></li>
+      <% end %>
+    </ul>
+  </div>
 
-<br />
+  <br />
 
-<%= link_to 'New photo', new_photo_path %>
+  <%= link_to 'New photo', new_photo_path %>
+</div>
+
