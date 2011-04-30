@@ -8,6 +8,7 @@ class Ability
     else
       can :read, Post
       can :read, Song
+      can :read, Photo
     end
   end
 end
