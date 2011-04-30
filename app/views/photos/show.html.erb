@@ -10,9 +10,11 @@
     <p>
       <%=h @photo.notes %>
     </p>
-    <% if can? :new, Post %>
+    <% if can? :edit, @photo %>
       <%= link_to 'Edit', edit_photo_path(@photo) %> |
-      <%= link_to 'Back', photos_path %>
+    <% end %>
+    <% if can? :delete, @photo %>
+      <%= link_to 'Delete', @photo, :confirm => 'Are you sure?', :method => :delete %>
     <% end %>
   </div>
 </div>

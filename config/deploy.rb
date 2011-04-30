@@ -34,6 +34,7 @@ end
 task :create_sym_links do
   run "(rm #{release_path}/config/database.yml && ln -s #{shared_path}/config/database.yml #{release_path}/config/database.yml) || echo 'not ready for this'"
   run "(rm -rf #{release_path}/public/system && ln -s #{shared_path}/system #{release_path}/public/) || echo 'not ready for this'"
+  run "(rm -rf #{release_path}/public/uploads && ln -s #{shared_path}/uploads #{release_path}/public/) || echo 'not ready for this'"
 end
 
 after "deploy:setup", :setup_production_database_configuration
