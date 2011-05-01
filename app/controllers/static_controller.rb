@@ -1,10 +1,8 @@
 class StaticController < ApplicationController
 
   def bio
-
   end
 
-  def images
-
+  def promo
   end
 end

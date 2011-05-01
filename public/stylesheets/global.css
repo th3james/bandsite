@@ -3,8 +3,14 @@ body {
 }
 
 a {
-    color: #85B931;
-    text-decoration: none;
+  color: #FF8100;
+  text-decoration: none;
+}
+
+b{
+  color: #85B931;
+  font-weight: normal;
+  font-family: Verdana;
 }
 
 p {
@@ -192,4 +198,12 @@ ul.side_nav li a {
 
 #photo_show {
   text-align: center;
+}
+
+ul {
+  padding-left: 30px;
+}
+
+div.inset p{
+  padding-left: 10px;
 }

@@ -6,8 +6,8 @@ Bandsite::Application.routes.draw do
 
   match 'login' => 'user_sessions#new'
   match 'logout' => 'user_sessions#destroy'
-  match "images" => 'static#images'
   match "biography" => 'static#bio'
+  #match "promo" => 'static#promo'
 
   resources :posts
   resources :songs
