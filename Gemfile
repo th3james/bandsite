@@ -13,6 +13,7 @@ gem "cancan"
 gem "kaminari"  
 gem "carrierwave"
 gem "rmagick"  
+gem "jammit"  
 
 
 #testing

@@ -61,3 +61,9 @@ end
 #     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
 #   end
 # end
+
+task :package_assets do
+  run "cd #{deploy_to}/current && jammit"
+end
+
+after "deploy", "deploy:package_assets"
