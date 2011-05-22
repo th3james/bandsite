@@ -142,8 +142,14 @@ ul.side_nav {
 }
 
 ul.side_nav li {
-  background-color: #85B931;
-  background: #CCC url(/images/button_bk.png) repeat-x 0% 0%;
+  background: #85B931;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#85B931', endColorstr='#5F8A19'); /* for IE */
+  background-image: -webkit-gradient(
+    linear,left top,left bottom,
+    from(#85B931),to(#5F8A19)
+  );
+  background-image: -moz-linear-gradient(top, #85B931, #5F8A19);
+  
   padding: 6px 8px;
   font-size: 16px;
   margin-bottom: 3px;
@@ -157,12 +163,6 @@ ul.side_nav li a {
     color:white;
 }
 
-.active_nav_item {
-    background-color: #85B931;
-    color: white;
-    padding-left: 5px;
-    font-size: 2em;
-}
 .top_rounded {
     -moz-border-radius-topleft: 5px;
     -moz-border-radius-topright: 5px;
@@ -176,12 +176,12 @@ ul.side_nav li a {
     -webkit-border-bottom-right-radius: 5px;
 }
 
-#photo_list {
+ul#photo_list {
   padding: 0;
   margin: 0;
 }
 
-#photo_list li {
+ul#photo_list li {
   display:inline-block;
   
   width: 200px;
@@ -196,7 +196,7 @@ ul.side_nav li a {
   line-height: 200px;
 }
 
-#photo_show {
+div#photo_show {
   text-align: center;
 }
 
