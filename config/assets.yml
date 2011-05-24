@@ -4,6 +4,7 @@ javascripts:
   workspace:
     #include jquery from google, as likely the user will have this precached
     - public/javascripts/jquery_ujs.js #Renamed rails.js for jquery
+    - public/javascripts/jquery.pjax.js
     - public/javascripts/application.js
 
 stylesheets:

@@ -18,8 +18,8 @@ p {
 }
 
 div.header_links {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 div.page_frame {
@@ -31,12 +31,15 @@ div.page_frame {
 }
 
 div.header {
-    height: 84px;
-    background-color: #3E3D42;
-    color:  white;
-    font-size: 5em;
+  height: 84px;
+  background-color: #85B931;
+  color:  white;
+  font-size: 5em;
 }
 
+div.header img{
+  padding-top: 11px;
+}
 div.main_content > div {
   padding-left: 15px;
 } 

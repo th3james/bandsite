@@ -5,6 +5,15 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
 
+  #We don't want to render the layout if PJAX is working
+  def render(options = nil, extra_options = {}, &block)
+    if request.headers['X-PJAX'] == 'true'
+      options = {} if options.nil?
+      options[:layout] = false 
+    end
+    super(options, extra_options, &block)
+  end
+
   private
   def current_user_session
     return @current_user_session if defined?(@current_user_session)
@@ -19,4 +28,5 @@ class ApplicationController < ActionController::Base
     flash[:error] = "Access denied!"
     redirect_to root_url
   end
+  
 end
