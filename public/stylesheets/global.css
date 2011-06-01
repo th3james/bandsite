@@ -1,5 +1,5 @@
 body {
-    background-color: #48494D;
+  background-color: #48494D;
 }
 
 a {
@@ -163,7 +163,17 @@ ul.side_nav li {
 }
 
 ul.side_nav li a {
-    color:white;
+  color:white;
+}
+
+ul.side_nav li a img {
+  float:left;
+  padding-right:5px;
+}
+
+ul.side_nav li a span {
+  float:right;
+  padding-right:5px;
 }
 
 .top_rounded {
