@@ -15,10 +15,18 @@
     </p>
 
     <div class="inset">
-      <h4>Places you can listen to us</h4>
-      <ul>
-        <li><%= link_to "SoundCloud", "http://soundcloud.com/barcode-channel/sets" %></li>
-        <li><%= link_to "BandCamp", "http://barcodechannel.bandcamp.com" %></li>
+      <h4>Listen to our music</h4>
+      <ul class="side_nav">
+        <li>
+          <%= link_to "http://soundcloud.com/barcode-channel", :target => "_blank" do %>
+            <%= image_tag('http://barcodechannel.com/images/icons/soundcloud.png') %> Soundcloud <span>></span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "http://barcodechannel.bandcamp.com/", :target => "_blank" do %>
+            <%= image_tag('http://barcodechannel.com/images/icons/bandcamp.png') %> Bandcamp <span>></span>
+          <% end %>
+        </li>
       </ul>
       <h4>Download MP3s</h4>
       <ul>
@@ -26,7 +34,7 @@
         <li><%= link_to "Ticket Out", "http://dl.dropbox.com/u/2324263/Barcode%20Channel%20-%20A%20Ticket%20Out.zip" %> (6 track E.P.)</li>
       </ul>
                 
-      <h4>What people are saying about us</h4>
+      <h4>Press</h4>
       <p>
         '<i>... a brilliant sound and an interesting sound ... </i>'<br/>
         <%= link_to "It's All Indie review of one of our gigs", 'http://its-all-indie.blogspot.com/2011/01/gig-review-ideals-haymakers-26th.html'%>.
@@ -40,7 +48,7 @@
       <p>
         We've got a full <b>biography/manifesto</b>, <b>news</b>, <b>photos</b> and <b>videos</b> on our website, alongside more relevant links:
         <ul>
-          <li><%= link_to "www.barcodechannel.com", 'http://barcodechannel.com' %></li>
+          <li><%= link_to "BarcodeChannel.com", 'http://barcodechannel.com' %></li>
         </ul>
       </p>
     </div>
@@ -52,6 +60,7 @@
       <b>Barcode Channel</b>
     </p>
 
+    <%= link_to image_tag('http://barcodechannel.com/images/BarcodeChannel.png'), 'http://barcodechannel.com/' %>
   </div>
 
 </div>
