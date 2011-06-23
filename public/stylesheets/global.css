@@ -123,6 +123,18 @@ div.post_body h4 {
   margin-bottom:2px;
 }
 
+div.post_body table {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  color:white;
+}
+
+div.post_body table td{
+  vertical-align:top;
+}
+div.post_body table td.right{
+  width:235px;
+}
+
 div.nav_panel {
     background-color: #85B931;
     color:  black;
@@ -180,6 +192,15 @@ div.inset ul.side_nav {
 }
 div.inset ul.side_nav a {
   font-weight:normal;
+}
+
+div.news_post div.right {
+  float:right;
+  width: 235px;
+}
+div.news_post div.left {
+  float:left;
+  width: 600px;
 }
 
 ul.side_nav {
