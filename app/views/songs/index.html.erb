@@ -3,7 +3,7 @@
 <% @songs.each do |song| %>
   <tr>
     <td><%= link_to song.name, song %></td>
-    <td><%= song.embed %></td>
+    <td><%= raw song.embed %></td>
   </tr>
 <% end %>
 </table>

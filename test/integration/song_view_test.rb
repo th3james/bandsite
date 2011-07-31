@@ -41,4 +41,28 @@ class SongViewTest < ActionDispatch::IntegrationTest
     assert !page.has_content?('2nd song')
     assert !page.has_content?('2nd embed')
   end
+
+  test "Embed content is printed unescaped on index, so links etc can be created" do
+    #Setup
+    song = Factory.create(:song, :embed => "<a href='#{root_url}'>MagicSongEmbedLink</a>")
+
+    #Navigation
+    visit songs_path
+
+    click_link "MagicSongEmbedLink"
+
+    assert_equal root_path, current_path
+  end
+
+  test "Embed content is printed unescaped on show page, so links etc can be created" do
+    #Setup
+    song = Factory.create(:song, :embed => "<a href='#{root_url}'>MagicSongEmbedLink</a>")
+
+    #Navigation
+    visit song_path(song)
+
+    click_link "MagicSongEmbedLink"
+
+    assert_equal root_path, current_path
+  end
 end
