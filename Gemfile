@@ -18,6 +18,8 @@ end
 
 gem 'jquery-rails'
 
+
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -29,5 +31,12 @@ gem 'jquery-rails'
 
 group :test do
   # Pretty printed test output
-  gem 'turn', :require => false
+  #gem 'turn', :require => false #Seems to break guard
+
+  gem "factory_girl_rails"
+  gem "capybara"
+  gem "guard-test"
+
+  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
+  gem 'growl' if RUBY_PLATFORM =~ /darwin/i #You will need growlnotify from growl extra for this to work
 end
