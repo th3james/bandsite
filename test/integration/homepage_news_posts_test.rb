@@ -62,4 +62,16 @@ class HomepageNewsPostsTest < ActionDispatch::IntegrationTest
 
     assert_equal root_path, current_path
   end
+
+  test "Body text is printed unescaped on show page, so links etc can be created" do
+    #Setup
+    post_1 = Factory.create(:post, :body => "<a href='#{root_url}'>MagicEmbeddedLink</a>")
+
+    #Navigation
+    visit post_path(post_1)
+
+    click_link "MagicEmbeddedLink"
+
+    assert_equal root_path, current_path
+  end
 end
