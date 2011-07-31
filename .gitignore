@@ -1,5 +1,7 @@
-log/*
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
+.sass-cache/
 *.swp
-*.swo
-.idea/*
-public/uploads/*
+vendor/ruby
