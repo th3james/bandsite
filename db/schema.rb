@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110428122729) do
+ActiveRecord::Schema.define(:version => 20110731155152) do
 
   create_table "photos", :force => true do |t|
     t.string   "notes"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(:version => 20110428122729) do
 
   create_table "songs", :force => true do |t|
     t.string   "name"
-    t.text     "url"
+    t.text     "embed"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "order_int"

@@ -1,4 +1,6 @@
 Bandsite::Application.routes.draw do
+  resources :songs, :only => [:index, :show]
+
   resources :posts, :only => [:index, :show]
 
   # The priority is based upon order of creation:

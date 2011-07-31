@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bandsite</title>
+  <title>Barcode Channel</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="span-24 last nav_panel">
+    <ul class="menu left_offset">
+      <li><%= link_to "News", posts_path %></li>
+      <li><%= link_to "Listen", songs_path %></li>
+      <li><%= link_to "Images", '#' %></li>
+      <li><%= link_to "About", '#' %></li>
+    </ul>
+  </div>
+  
 
 <%= yield %>
 
