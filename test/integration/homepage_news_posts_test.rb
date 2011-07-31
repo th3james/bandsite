@@ -50,4 +50,16 @@ class HomepageNewsPostsTest < ActionDispatch::IntegrationTest
     assert page.has_content?('Newer post')
     assert !page.has_content?('Older post')
   end
+
+  test "Body text is printed unescaped on index, so links etc can be created" do
+    #Setup
+    post_1 = Factory.create(:post, :body => "<a href='#{root_url}'>MagicEmbeddedLink</a>")
+
+    #Navigation
+    visit posts_path
+
+    click_link "MagicEmbeddedLink"
+
+    assert_equal root_path, current_path
+  end
 end

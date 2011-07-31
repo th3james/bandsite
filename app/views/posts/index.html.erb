@@ -4,7 +4,7 @@
 <% @posts.each do |post| %>
   <tr>
     <td><%= link_to post.title, post %></td>
-    <td><%= post.body %></td>
+    <td><%= raw post.body %></td>
   </tr>
 <% end %>
 </table>
