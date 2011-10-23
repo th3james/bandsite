@@ -7,16 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="span-24 last nav_panel">
-    <ul class="menu left_offset">
-      <li><%= link_to "News", posts_path %></li>
-      <li><%= link_to "Listen", songs_path %></li>
-      <li><%= link_to "Images", '#' %></li>
-      <li><%= link_to "About", '#' %></li>
-    </ul>
-  </div>
+  <div class='container'>
+    <nav>
+      <%= link_to "News", posts_path %>
+      <%= link_to "Listen", songs_path %>
+      <%= link_to "Images", '#' %>
+      <%= link_to "About", '#' %>
+    </nav>
 
-<%= yield %>
+    <div class="main-content" style="width:600px;float:left;overflow:hidden;">
+      <%= yield %>
+    </div>
+    <div class="side_nav" style="width:300px;float:right; overflow:hidden;">
+      side-nav
+    </div>
+
+  </div>
 
 </body>
 </html>

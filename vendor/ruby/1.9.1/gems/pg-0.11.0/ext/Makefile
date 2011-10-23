@@ -4,11 +4,11 @@ SHELL = /bin/sh
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /Users/th3james/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1
-hdrdir = /Users/th3james/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1
-arch_hdrdir = /Users/th3james/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/$(arch)
+topdir = /Users/cox/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1
+hdrdir = /Users/cox/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1
+arch_hdrdir = /Users/cox/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/$(arch)
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
-prefix = $(DESTDIR)/Users/th3james/.rvm/rubies/ruby-1.9.2-p290
+prefix = $(DESTDIR)/Users/cox/.rvm/rubies/ruby-1.9.2-p290
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
 exec_prefix = $(prefix)
 vendorhdrdir = $(rubyhdrdir)/vendor_ruby
@@ -43,7 +43,7 @@ sitearchdir = $(sitelibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 
-CC = /usr/bin/gcc-4.2
+CC = gcc
 CXX = g++
 LIBRUBY = $(LIBRUBY_SO)
 LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
@@ -60,9 +60,9 @@ warnflags = -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwri
 CFLAGS   = -fno-common $(cflags)  -fno-common -pipe 
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
-CPPFLAGS = -DRUBY_EXTCONF_H=\"$(RUBY_EXTCONF_H)\" -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE $(DEFS) $(cppflags) -I/usr/local/Cellar/postgresql/9.0.4/include
+CPPFLAGS = -DRUBY_EXTCONF_H=\"$(RUBY_EXTCONF_H)\" -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE $(DEFS) $(cppflags) -I/usr/include
 CXXFLAGS = $(CFLAGS) $(cxxflags)
-ldflags  = -L. -L/usr/local/lib -L/usr/local/Cellar/postgresql/9.0.4/lib
+ldflags  = -L. -L/usr/local/lib -L/usr/lib
 dldflags = -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress -Wl,-flat_namespace
 ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags)
@@ -74,10 +74,10 @@ EXEEXT =
 RUBY_BASE_NAME = ruby
 RUBY_INSTALL_NAME = ruby
 RUBY_SO_NAME = ruby.1.9.1
-arch = x86_64-darwin11.0.0
+arch = x86_64-darwin11.1.0
 sitearch = $(arch)
 ruby_version = 1.9.1
-ruby = /Users/th3james/.rvm/rubies/ruby-1.9.2-p290/bin/ruby
+ruby = /Users/cox/.rvm/rubies/ruby-1.9.2-p290/bin/ruby
 RUBY = $(ruby)
 RM = rm -f
 RM_RF = $(RUBY) -run -e rm -- -rf
@@ -114,8 +114,8 @@ STATIC_LIB =
 
 BINDIR        = $(bindir)
 RUBYCOMMONDIR = $(sitedir)$(target_prefix)
-RUBYLIBDIR = /Users/th3james/dev/ruby/bandsite/vendor/ruby/1.9.1/gems/pg-0.11.0/lib$(target_prefix)
-RUBYARCHDIR = /Users/th3james/dev/ruby/bandsite/vendor/ruby/1.9.1/gems/pg-0.11.0/lib$(target_prefix)
+RUBYLIBDIR = /Users/cox/development/ruby/bandsite/vendor/ruby/1.9.1/gems/pg-0.11.0/lib$(target_prefix)
+RUBYARCHDIR = /Users/cox/development/ruby/bandsite/vendor/ruby/1.9.1/gems/pg-0.11.0/lib$(target_prefix)
 HDRDIR        = $(rubyhdrdir)/ruby$(target_prefix)
 ARCHHDRDIR    = $(rubyhdrdir)/$(arch)/ruby$(target_prefix)
 

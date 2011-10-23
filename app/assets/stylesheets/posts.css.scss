@@ -1,3 +1,17 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$bc-green: #85B931;
+$text_light: #EEEEEE;
+
+section.welcome {
+  background-color: $bc-green;
+
+  padding: 5px 13px;
+  border-radius: 8px;
+
+  h2{
+    padding-top: 0;
+    color: $text_light;
+  }
+}
