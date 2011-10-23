@@ -11,8 +11,14 @@
 /* Reset.less
  * Props to Eric Meyer (meyerweb.com) for his CSS reset file. We're using an adapted version here	that cuts out some of the reset HTML elements we will never need here (i.e., dfn, samp, etc).
  * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+$bc-green: #85B931;
 $dark_grey: #3E3D42;
+$light_grey: #48494D;
 $text_light: #EEEEEE;
+$dark_text: #333;
+$red_link: #871105;
+$redder_link: #E47266;
+$link_color: #FF8100;
 html, body {
   margin: 0;
   padding: 0;
@@ -98,6 +104,9 @@ a:focus {
 }
 a:hover, a:active {
   outline: 0;
+}
+b {
+  color: #FFF;
 }
 article,
 aside,
@@ -195,7 +204,7 @@ body {
   color: $text_light;
 }
 .container {
-  width: 940px;
+  width: 950px;
   margin-left: auto;
   margin-right: auto;
   zoom: 1;
@@ -235,7 +244,7 @@ body {
 }
   */
 a {
-  color: #0069d6;
+  color: $link_color;
   text-decoration: none;
   line-height: inherit;
   font-weight: inherit;
@@ -1448,7 +1457,7 @@ a.menu:after, .dropdown-toggle:after {
 .tabs {
   float: left;
   width: 100%;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid $light_grey;
 }
 .tabs > li {
   position: relative;
@@ -1462,16 +1471,18 @@ a.menu:after, .dropdown-toggle:after {
   -webkit-border-radius: 4px 4px 0 0;
   -moz-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
+  color: $red_link;
 }
 .tabs > li > a:hover {
   text-decoration: none;
-  background-color: #eee;
-  border-color: #eee #eee #ddd;
+  background-color: $light_grey;
+  border-color: $light_grey;
+  color: #FFF;
 }
 .tabs > li.active > a {
-  color: #808080;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
+  color: #AAA;
+  background-color: $dark_grey;
+  border: 1px solid $light_grey;
   border-bottom-color: transparent;
 }
 .tabs .menu-dropdown, .tabs .dropdown-menu {

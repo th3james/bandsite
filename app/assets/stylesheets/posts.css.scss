@@ -3,6 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $bc-green: #85B931;
 $text_light: #EEEEEE;
+$dark_text: #333;
+$red_link: #C84335;
+$redder_link: #821C11;
 
 section.welcome {
   background-color: $bc-green;
@@ -10,8 +13,29 @@ section.welcome {
   padding: 5px 13px;
   border-radius: 8px;
 
+  border: 1px solid #666;
+  color: $dark_text;
+
   h2{
     padding-top: 0;
-    color: $text_light;
+    color: #FFF;
+    border-bottom: 1px solid #BADC83;
+    padding-bottom:0px;
+    margin-bottom:5px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  a {
+    color: $red_link;
+  }
+  a:hover {
+    color: $redder_link;
+  }
+
+  b {
+    color: $dark_text;
   }
 }

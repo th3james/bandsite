@@ -1,0 +1,26 @@
+$bc-green: #85B931;
+$dark_grey: #3E3D42;
+$light_grey: #48494D;
+$text_light: #EEEEEE;
+$dark_text: #333;
+$red_link: #C84335;
+$redder_link: #E47266;
+$link_color: #FF8100;
+
+nav.main_nav {
+  ul.tabs {
+    padding: 3px 6px;
+    padding-bottom: 0px;
+
+    width: 938px;
+
+    font-size: 15px;
+
+    background-color: $bc-green;
+  }
+}
+
+img#banner_img {
+  background-color: $bc-green;
+  padding: 12px 0;
+}

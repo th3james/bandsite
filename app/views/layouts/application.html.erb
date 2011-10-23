@@ -8,11 +8,14 @@
 </head>
 <body>
   <div class='container'>
-    <nav>
-      <%= link_to "News", posts_path %>
-      <%= link_to "Listen", songs_path %>
-      <%= link_to "Images", '#' %>
-      <%= link_to "About", '#' %>
+    <%= image_tag 'bc_banner.png', :alt => 'Barcode Channel', :id=> 'banner_img' %>
+    <nav class='main_nav'>
+      <ul class='tabs'>
+        <li class='active'><%= link_to "News", posts_path %></li>
+        <li><%= link_to "Listen", songs_path %></li>
+        <li><%= link_to "Images", '#' %></li>
+        <li><%= link_to "About", '#' %></li>
+      </ul>
     </nav>
 
     <div class="main-content" style="width:600px;float:left;overflow:hidden;">
