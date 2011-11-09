@@ -1,41 +1,49 @@
 
 SHELL = /bin/sh
 
+# V=0 quiet, V=1 verbose.  other values don't work.
+V = 0
+Q1 = $(V:1=)
+Q = $(Q1:0=@)
+n=$(NULLCMD)
+ECHO1 = $(V:1=@$n)
+ECHO = $(ECHO1:0=@echo)
+
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /Users/cox/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1
-hdrdir = /Users/cox/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1
-arch_hdrdir = /Users/cox/.rvm/rubies/ruby-1.9.2-p290/include/ruby-1.9.1/$(arch)
+topdir = /Users/th3james/.rvm/rubies/ruby-1.9.3-head/include/ruby-1.9.1
+hdrdir = /Users/th3james/.rvm/rubies/ruby-1.9.3-head/include/ruby-1.9.1
+arch_hdrdir = /Users/th3james/.rvm/rubies/ruby-1.9.3-head/include/ruby-1.9.1/$(arch)
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
-prefix = $(DESTDIR)/Users/cox/.rvm/rubies/ruby-1.9.2-p290
-rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
+prefix = $(DESTDIR)/Users/th3james/.rvm/rubies/ruby-1.9.3-head
 exec_prefix = $(prefix)
-vendorhdrdir = $(rubyhdrdir)/vendor_ruby
-sitehdrdir = $(rubyhdrdir)/site_ruby
-rubyhdrdir = $(includedir)/$(RUBY_BASE_NAME)-$(ruby_version)
-vendordir = $(rubylibprefix)/vendor_ruby
-sitedir = $(rubylibprefix)/site_ruby
-ridir = $(datarootdir)/$(RI_BASE_NAME)
-mandir = $(datarootdir)/man
-localedir = $(datarootdir)/locale
-libdir = $(exec_prefix)/lib
-psdir = $(docdir)
-pdfdir = $(docdir)
-dvidir = $(docdir)
-htmldir = $(docdir)
-infodir = $(datarootdir)/info
-docdir = $(datarootdir)/doc/$(PACKAGE)
-oldincludedir = $(DESTDIR)/usr/include
-includedir = $(prefix)/include
-localstatedir = $(prefix)/var
-sharedstatedir = $(prefix)/com
-sysconfdir = $(prefix)/etc
-datadir = $(datarootdir)
-datarootdir = $(prefix)/share
-libexecdir = $(exec_prefix)/libexec
-sbindir = $(exec_prefix)/sbin
+rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
 bindir = $(exec_prefix)/bin
+sbindir = $(exec_prefix)/sbin
+libexecdir = $(exec_prefix)/libexec
+datarootdir = $(prefix)/share
+datadir = $(datarootdir)
+sysconfdir = $(prefix)/etc
+sharedstatedir = $(prefix)/com
+localstatedir = $(prefix)/var
+includedir = $(prefix)/include
+oldincludedir = $(DESTDIR)/usr/include
+docdir = $(datarootdir)/doc/$(PACKAGE)
+infodir = $(datarootdir)/info
+htmldir = $(docdir)
+dvidir = $(docdir)
+pdfdir = $(docdir)
+psdir = $(docdir)
+libdir = $(exec_prefix)/lib
+localedir = $(datarootdir)/locale
+mandir = $(datarootdir)/man
+ridir = $(datarootdir)/$(RI_BASE_NAME)
+sitedir = $(rubylibprefix)/site_ruby
+vendordir = $(rubylibprefix)/vendor_ruby
+rubyhdrdir = $(includedir)/$(RUBY_BASE_NAME)-$(ruby_version)
+sitehdrdir = $(rubyhdrdir)/site_ruby
+vendorhdrdir = $(rubyhdrdir)/vendor_ruby
 rubylibdir = $(rubylibprefix)/$(ruby_version)
 archdir = $(rubylibdir)/$(arch)
 sitelibdir = $(sitedir)/$(ruby_version)
@@ -43,8 +51,10 @@ sitearchdir = $(sitelibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 
-CC = gcc
-CXX = g++
+NULLCMD = :
+
+CC = /usr/bin/gcc-4.2
+CXX = g++-4.2
 LIBRUBY = $(LIBRUBY_SO)
 LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
 LIBRUBYARG_SHARED = -l$(RUBY_SO_NAME)
@@ -56,13 +66,13 @@ RUBY_EXTCONF_H = extconf.h
 cflags   =  $(optflags) $(debugflags) $(warnflags)
 optflags = -O3
 debugflags = -ggdb
-warnflags = -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long
+warnflags = -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration
 CFLAGS   = -fno-common $(cflags)  -fno-common -pipe 
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
-CPPFLAGS = -DRUBY_EXTCONF_H=\"$(RUBY_EXTCONF_H)\" -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE $(DEFS) $(cppflags) -I/usr/include
+CPPFLAGS = -DRUBY_EXTCONF_H=\"$(RUBY_EXTCONF_H)\" -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE $(DEFS) $(cppflags) -I/usr/local/Cellar/postgresql/9.0.4/include
 CXXFLAGS = $(CFLAGS) $(cxxflags)
-ldflags  = -L. -L/usr/local/lib -L/usr/lib
+ldflags  = -L. -L/usr/local/lib -L/usr/local/Cellar/postgresql/9.0.4/lib
 dldflags = -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress -Wl,-flat_namespace
 ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags)
@@ -74,14 +84,14 @@ EXEEXT =
 RUBY_BASE_NAME = ruby
 RUBY_INSTALL_NAME = ruby
 RUBY_SO_NAME = ruby.1.9.1
-arch = x86_64-darwin11.1.0
+arch = x86_64-darwin11.2.0
 sitearch = $(arch)
 ruby_version = 1.9.1
-ruby = /Users/cox/.rvm/rubies/ruby-1.9.2-p290/bin/ruby
+ruby = /Users/th3james/.rvm/rubies/ruby-1.9.3-head/bin/ruby
 RUBY = $(ruby)
 RM = rm -f
 RM_RF = $(RUBY) -run -e rm -- -rf
-RMDIRS = $(RUBY) -run -e rmdir -- -p
+RMDIRS = rmdir -p
 MAKEDIRS = mkdir -p
 INSTALL = /usr/bin/install -c
 INSTALL_PROG = $(INSTALL) -m 0755
@@ -114,8 +124,8 @@ STATIC_LIB =
 
 BINDIR        = $(bindir)
 RUBYCOMMONDIR = $(sitedir)$(target_prefix)
-RUBYLIBDIR = /Users/cox/development/ruby/bandsite/vendor/ruby/1.9.1/gems/pg-0.11.0/lib$(target_prefix)
-RUBYARCHDIR = /Users/cox/development/ruby/bandsite/vendor/ruby/1.9.1/gems/pg-0.11.0/lib$(target_prefix)
+RUBYLIBDIR = /Users/th3james/dev/ruby/bandsite/vendor/ruby/1.9.1/gems/pg-0.11.0/lib$(target_prefix)
+RUBYARCHDIR = /Users/th3james/dev/ruby/bandsite/vendor/ruby/1.9.1/gems/pg-0.11.0/lib$(target_prefix)
 HDRDIR        = $(rubyhdrdir)/ruby$(target_prefix)
 ARCHHDRDIR    = $(rubyhdrdir)/$(arch)/ruby$(target_prefix)
 
@@ -140,7 +150,7 @@ distclean-so::
 distclean: clean distclean-so distclean-rb-default distclean-rb
 		@-$(RM) Makefile $(RUBY_EXTCONF_H) conftest.* mkmf.log
 		@-$(RM) core ruby$(EXEEXT) *~ $(DISTCLEANFILES)
-		@-$(RMDIRS) $(DISTCLEANDIRS)
+		@-$(RMDIRS) $(DISTCLEANDIRS) 2> /dev/null || true
 
 realclean: distclean
 install: install-so install-rb
@@ -154,33 +164,49 @@ install-rb: pre-install-rb install-rb-default
 install-rb-default: pre-install-rb-default
 pre-install-rb: Makefile
 pre-install-rb-default: Makefile
+pre-install-rb-default:
+	$(ECHO) installing default pg_ext libraries
 $(RUBYARCHDIR):
-	$(MAKEDIRS) $@
+	$(Q) $(MAKEDIRS) $@
 
 site-install: site-install-so site-install-rb
 site-install-so: install-so
 site-install-rb: install-rb
 
-.SUFFIXES: .c .m .cc .cxx .cpp .C .o
+.SUFFIXES: .c .m .cc .mm .cxx .cpp .C .o
 
 .cc.o:
-	$(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -c $<
+	$(ECHO) compiling $(<)
+	$(Q) $(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -c $<
+
+.mm.o:
+	$(ECHO) compiling $(<)
+	$(Q) $(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -c $<
 
 .cxx.o:
-	$(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -c $<
+	$(ECHO) compiling $(<)
+	$(Q) $(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -c $<
 
 .cpp.o:
-	$(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -c $<
+	$(ECHO) compiling $(<)
+	$(Q) $(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -c $<
 
 .C.o:
-	$(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -c $<
+	$(ECHO) compiling $(<)
+	$(Q) $(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -c $<
 
 .c.o:
-	$(CC) $(INCFLAGS) $(CPPFLAGS) $(CFLAGS) $(COUTFLAG)$@ -c $<
+	$(ECHO) compiling $(<)
+	$(Q) $(CC) $(INCFLAGS) $(CPPFLAGS) $(CFLAGS) $(COUTFLAG)$@ -c $<
+
+.m.o:
+	$(ECHO) compiling $(<)
+	$(Q) $(CC) $(INCFLAGS) $(CPPFLAGS) $(CFLAGS) $(COUTFLAG)$@ -c $<
 
 $(DLLIB): $(OBJS) Makefile
+	$(ECHO) linking shared-object $(DLLIB)
 	@-$(RM) $(@)
-	$(LDSHARED) -o $@ $(OBJS) $(LIBPATH) $(DLDFLAGS) $(LOCAL_LIBS) $(LIBS)
+	$(Q) $(LDSHARED) -o $@ $(OBJS) $(LIBPATH) $(DLDFLAGS) $(LOCAL_LIBS) $(LIBS)
 
 
 
