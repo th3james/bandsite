@@ -30,16 +30,7 @@ body {
 nav.main_nav {
   position:relative;
   top: -5px;
-  
   ul.tabs {
-    padding: 3px 6px;
-    padding-bottom: 0px;
-
-    width: 938px;
-
-    font-size: 15px;
-
-    margin: 0 0 15px 0;
     background: rgb(133,185,49); /* Old browsers */
     background: -moz-linear-gradient(top, rgba(133,185,49,1) 0%, rgba(100,142,16,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(133,185,49,1)), color-stop(100%,rgba(100,142,16,1))); /* Chrome,Safari4+ */
@@ -48,7 +39,15 @@ nav.main_nav {
     background: -ms-linear-gradient(top, rgba(133,185,49,1) 0%,rgba(100,142,16,1) 100%); /* IE10+ */
     background: linear-gradient(top, rgba(133,185,49,1) 0%,rgba(100,142,16,1) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#85b931', endColorstr='#648e10',GradientType=0 ); /* IE6-9 */
-    
+
+    padding: 3px 6px;
+    padding-bottom: 0px;
+
+    width: 938px;
+
+    font-size: 15px;
+
+    margin: 0 0 15px 0;
     
     a {
       color:white;
@@ -64,4 +63,3 @@ img#banner_img {
   background-color: $bc-green;
   padding: 10px 0 0 0;
 }
-

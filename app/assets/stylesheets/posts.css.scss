@@ -8,12 +8,19 @@ $red_link: #C84335;
 $redder_link: #821C11;
 
 section.welcome {
-  background-color: $bc-green;
+  background: $bc-green; /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(133,185,49,1) 0%, rgba(100,142,16,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(133,185,49,1)), color-stop(100%,rgba(100,142,16,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(133,185,49,1) 0%,rgba(100,142,16,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(133,185,49,1) 0%,rgba(100,142,16,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(133,185,49,1) 0%,rgba(100,142,16,1) 100%); /* IE10+ */
+  background: linear-gradient(top, rgba(133,185,49,1) 0%,rgba(100,142,16,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#85b931', endColorstr='#648e10',GradientType=0 ); /* IE6-9 */
 
   padding: 5px 13px;
   border-radius: 8px;
 
-  border: 1px solid #666;
+  border: 1px solid #48494D;
   color: $dark_text;
 
   h2{
