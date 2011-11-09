@@ -1,5 +1,6 @@
 $bc-green: #85B931;
 $dark_grey: #3E3D42;
+$darkest_grey: #333;
 $light_grey: #48494D;
 $text_light: #EEEEEE;
 $dark_text: #333;
@@ -17,14 +18,21 @@ body {
     box-shadow: 0 1px 50px #222;
 
     background-color: $dark_grey;
-
-    div.main-content {
-      width:600px;
-      float:left;
-      overflow:hidden;
-      padding: 0 10px;
-    }
   }
+}
+
+div#main-content {
+  top: 5px;
+  width:600px;
+  float:left;
+  overflow:hidden;
+  padding: 0 10px;
+}
+
+div#side-nav {
+  position:relative;
+  top: -6px;
+  background-color: $darkest-grey;
 }
 
 nav.main_nav {
@@ -47,7 +55,7 @@ nav.main_nav {
 
     font-size: 15px;
 
-    margin: 0 0 15px 0;
+    margin: 0;
     
     a {
       color:white;
@@ -63,3 +71,4 @@ img#banner_img {
   background-color: $bc-green;
   padding: 10px 0 0 0;
 }
+
