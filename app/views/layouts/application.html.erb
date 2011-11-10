@@ -22,7 +22,13 @@
       <%= yield %>
     </div>
     <div id="side-nav" style="width:300px;float:right; overflow:hidden;">
-      <h3>Can haz side navigation? kthxbye</h3>
+      <h2>Other pages</h2>
+      <ul id='ext-links'>
+        <%= link_to '#' do %><li><span class='logo'><%= image_tag 'soundcloud.png' %></span><span>Soundcloud</span></li><% end %>
+        <%= link_to '#' do %><li><span class='logo'><%= image_tag 'soundcloud.png' %></span><span>Soundcloud</span></li><% end %>
+        <%= link_to '#' do %><li><span class='logo'><%= image_tag 'soundcloud.png' %></span><span>Soundcloud</span></li><% end %>
+        <%= link_to '#' do %><li><span class='logo'><%= image_tag 'soundcloud.png' %></span><span>Soundcloud</span></li><% end %>
+      </ul>
     </div>
 
   </div>
