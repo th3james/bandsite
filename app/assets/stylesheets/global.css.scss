@@ -30,25 +30,32 @@ body {
 div#main-content {
   margin-top: 5px;
   top: 5px;
-  width:600px;
+  width:650px;
   float:left;
   overflow:hidden;
   padding: 0 10px;
 }
 
 div#side-nav {
+  width:245px;
+  float:right;
+  overflow:hidden;
+
   position:relative;
   top: -6px;
   background-color: $darkest-grey;
+  padding: 10px 15px;
 
   ul#ext-links {
-    margin-left: 10px;
+    margin-left: 0;
     a li {
       color:white;
-      font-size:16px;
       list-style:none;
 
-      margin: 5px;
+      font-size:18px;
+      line-height: 22px;
+
+      margin: 10px 0;
 
       overflow:hidden;
 
@@ -61,7 +68,7 @@ div#side-nav {
 
       float:left;
       width: 200px;
-      height: 19px;
+      height: 22px;
 
       background: rgb(170,221,59); /* Old browsers */
       background: -moz-linear-gradient(top, rgba(170,221,59,1) 0%, rgba(133,185,49,1) 51%, rgba(91,130,15,1) 100%); /* FF3.6+ */
@@ -100,7 +107,7 @@ div#side-nav {
 
       img {
         position:relative;
-        top: -3px;
+        top: -1px;
       }
     }
 

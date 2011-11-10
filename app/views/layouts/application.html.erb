@@ -21,7 +21,7 @@
     <div id="main-content">
       <%= yield %>
     </div>
-    <div id="side-nav" style="width:300px;float:right; overflow:hidden;">
+    <div id="side-nav">
       <h2>Other pages</h2>
       <ul id='ext-links'>
         <%= link_to '#' do %><li><span class='logo'><%= image_tag 'soundcloud.png' %></span><span>Soundcloud</span></li><% end %>
@@ -29,6 +29,34 @@
         <%= link_to '#' do %><li><span class='logo'><%= image_tag 'bandcamp.png' %></span><span>Bandcamp</span></li><% end %>
         <%= link_to '#' do %><li><span class='logo'><%= image_tag 'youtube.png' %></span><span>YouTube</span></li><% end %>
       </ul>
+      <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+      <script>
+        new TWTR.Widget({
+          version: 2,
+          type: 'profile',
+          rpp: 4,
+          interval: 30000,
+          width: 245,
+          height: 300,
+          theme: {
+            shell: {
+              background: '#85b931',
+              color: '#ffffff'
+            },
+            tweets: {
+              background: '#3e3d42',
+              color: '#ffffff',
+              links: '#85b931'
+            }
+          },
+          features: {
+            scrollbar: false,
+            loop: false,
+            live: false,
+            behavior: 'all'
+          }
+        }).render().setUser('barcodechannel').start();
+      </script>
     </div>
 
   </div>
