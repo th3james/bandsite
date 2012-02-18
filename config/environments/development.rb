@@ -32,4 +32,9 @@ Bandsite::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   config.active_record.auto_explain_threshold_in_seconds = 0.5
 
+  # Rails admin asked for this, so I did as I was told
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  
+  # Rails admin asked for this 2, better on heroku apparently
+  config.assets.initialize_on_precompile = false
 end

@@ -19,6 +19,9 @@ end
 gem 'jquery-rails'
 gem 'kaminari'
 
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -42,3 +45,6 @@ group :test do
 
   gem 'ruby-prof'
 end
+
+
+gem "devise"

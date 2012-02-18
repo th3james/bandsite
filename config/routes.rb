@@ -1,4 +1,8 @@
 Bandsite::Application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
+  devise_for :users
+
   resources :songs, :only => [:index, :show]
 
   resources :posts, :only => [:index, :show]
