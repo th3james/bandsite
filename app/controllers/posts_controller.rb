@@ -1,8 +1,11 @@
 class PostsController < ApplicationController
+
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.order('created_at DESC').page(params[:page]).per(5)
+    unless fragment_exist?('posts-index')
+      @posts = Post.order('created_at DESC').page(params[:page]).per(5)
+    end
 
     respond_to do |format|
       format.html # index.html.erb
