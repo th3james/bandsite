@@ -18,7 +18,9 @@ end
 
 gem 'jquery-rails'
 gem 'kaminari'
+gem 'pjax-rails'
 
+gem "devise"
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
 
@@ -47,4 +49,3 @@ group :test do
 end
 
 
-gem "devise"

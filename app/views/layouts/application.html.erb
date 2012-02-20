@@ -20,8 +20,10 @@
 
     <div id="main-content">
       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-      <%= yield %>
+      <p class="alert"><%= alert %></p>
+      <div  data-pjax-container>
+        <%= yield %>
+      </div>
     </div>
     <div id="side-nav">
       <h2>Other pages</h2>
