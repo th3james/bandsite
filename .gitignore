@@ -6,3 +6,4 @@ tmp/
 *.swp
 vendor/ruby
 *.un~
+*.DS_Store
