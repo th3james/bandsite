@@ -47,6 +47,7 @@
             <li><%= link_to "Listen", songs_path %></li>
             <li><%= link_to "Images", '#' %></li>
             <li><%= link_to "About", '#' %></li>
+            <li><%= link_to "Links", '#ext-links' %></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -54,16 +55,13 @@
   </div>
 
   <div class='container'>
-    <%= image_tag 'bc_banner.png', :alt => 'Barcode Channel', :id=> 'banner_img' %>
+    <h1 id='header-name'>BARCODE CHANNEL</h1>
+    <span id='mission'>Post-punk guitars, laptop beats and a DIY ethic since 2009</span>
 
-    <div id="main-content">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <div  data-pjax-container>
-        <%= yield %>
-      </div>
+    <div id="main-content" data-pjax-container>
+      <%= yield %>
     </div>
-    <div id="side-nav">
+    <footer id="side-nav">
       <h2>Other pages</h2>
       <ul id='ext-links'>
         <%= link_to '#' do %><li><span class='logo'><%= image_tag 'soundcloud.png' %></span><span>Soundcloud</span></li><% end %>
@@ -71,35 +69,7 @@
         <%= link_to '#' do %><li><span class='logo'><%= image_tag 'bandcamp.png' %></span><span>Bandcamp</span></li><% end %>
         <%= link_to '#' do %><li><span class='logo'><%= image_tag 'youtube.png' %></span><span>YouTube</span></li><% end %>
       </ul>
-      <script src="http://widgets.twimg.com/j/2/widget.js"></script>
-      <script>
-        new TWTR.Widget({
-          version: 2,
-          type: 'profile',
-          rpp: 4,
-          interval: 30000,
-          width: 245,
-          height: 300,
-          theme: {
-            shell: {
-              background: '#85b931',
-              color: '#ffffff'
-            },
-            tweets: {
-              background: '#3e3d42',
-              color: '#ffffff',
-              links: '#85b931'
-            }
-          },
-          features: {
-            scrollbar: false,
-            loop: false,
-            live: false,
-            behavior: 'all'
-          }
-        }).render().setUser('barcodechannel').start();
-      </script>
-    </div>
+    </footer>
 
   </div>
 

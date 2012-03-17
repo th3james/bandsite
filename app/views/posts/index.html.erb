@@ -1,20 +1,10 @@
-<section class='welcome shadowed'>
-  <h2>Hi there</h2>
-  <p>We are <b>Barcode Channel</b>, a DIY band who fuse post-punk guitars with electronic beats.</p>
-  <p>We could say we sound a bit like Radiohead, Foals and Bloc Party but why not make up your own mind on our  <%= link_to "Listen", songs_path %> page?</p>
-</section>
+<h2>News</h2>
 
-<h1>News</h1>
-
-<table>
-<% cache("posts-index") do %> 
+<ul id='post-list'>
   <% @posts.each do |post| %>
-    <tr>
-      <td><%= link_to post.title, post %></td>
-      <td><%= raw post.body %></td>
-    </tr>
+    <li>
+      <h3><%= link_to post.title, post %></h3>
+      <div class='body'><%= raw post.body %></div>
+    </li>
   <% end %>
-<% end %>
-</table>
-
-<br />
+</ul>

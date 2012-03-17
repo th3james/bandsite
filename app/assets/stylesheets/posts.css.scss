@@ -1,48 +1,11 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-$bc-green: #85B931;
-$text_light: #EEEEEE;
-$dark_text: #333;
-$red_link: #C84335;
-$redder_link: #821C11;
+#post-list {
+  list-style-type:none;
+  margin-left: 0;
 
-section.welcome {
-  background: $bc-green; /* Old browsers */
-  background: -moz-linear-gradient(top, rgba(133,185,49,1) 0%, rgba(100,142,16,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(133,185,49,1)), color-stop(100%,rgba(100,142,16,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(133,185,49,1) 0%,rgba(100,142,16,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(133,185,49,1) 0%,rgba(100,142,16,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(133,185,49,1) 0%,rgba(100,142,16,1) 100%); /* IE10+ */
-  background: linear-gradient(top, rgba(133,185,49,1) 0%,rgba(100,142,16,1) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#85b931', endColorstr='#648e10',GradientType=0 ); /* IE6-9 */
-
-  padding: 5px 13px;
-  border-radius: 8px;
-
-  border: 1px solid #333;
-  color: $dark_text;
-
-  h2{
-    padding-top: 0;
-    color: #FFF;
-    border-bottom: 1px solid #BADC83;
-    padding-bottom:0px;
-    margin-bottom:5px;
-  }
-
-  p {
-    font-size: 14px;
-  }
-
-  a {
-    color: $red_link;
-  }
-  a:hover {
-    color: $redder_link;
-  }
-
-  b {
-    color: $dark_text;
+  li {
+    h3 {
+    }
+    div.body {
+    }
   }
 }
