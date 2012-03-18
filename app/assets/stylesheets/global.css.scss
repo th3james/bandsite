@@ -12,6 +12,10 @@ body {
   background-color: $light_grey;
 }
 
+label {
+  color: #EEE;
+}
+
 .shadowed {
   -webkit-box-shadow: 3px 3px 15px #333;
   -moz-box-shadow: 3px 3px 15px #333;
@@ -31,8 +35,8 @@ a.brand {
   border-style: solid;
   border-color: $bc-green;
   color: white;
-  font-size:57px;
-  line-height:56px;
+  font-size:56px;
+  line-height:55px;
   margin-bottom:10px;
 }
 
