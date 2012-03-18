@@ -14,7 +14,7 @@ Bandsite::Application.configure do
   #config.action_controller.perform_caching = false
 
   # Options for caching
-  config.action_controller.perform_caching = true
+  config.action_controller.perform_caching = false
   config.action_controller.page_cache_directory = "#{::Rails.root}/public/cache"
 
   # Don't care if the mailer can't send
