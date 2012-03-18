@@ -9,3 +9,9 @@ test:
   adapter: postgresql
   database: bandsite_test
   password: postgres
+
+production:
+  username: postgres
+  adapter: postgresql
+  database: bandsite_production
+  password: postgres
