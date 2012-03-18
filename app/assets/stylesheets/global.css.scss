@@ -90,6 +90,28 @@ footer {
   padding: 0 10px 5px 10px;
 
   > h2 {
-    
+    color: white;
+    border-bottom: 1px solid #666;
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: #FF7D1B
+  }
+}
+
+#post-list {
+  list-style-type:none;
+  margin-left: 0;
+
+  li {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #333;
+
+    h3 {
+    }
+    div.body {
+      padding: 5px;
+    }
   }
 }

@@ -45,6 +45,7 @@ GEM
     activesupport (3.2.1)
       i18n (~> 0.6)
       multi_json (~> 1.0)
+    addressable (2.2.7)
     archive-tar-minitar (0.5.2)
     arel (3.0.0)
     bbenezech-nested_form (0.0.3)
@@ -90,6 +91,11 @@ GEM
       guard (>= 0.4)
       test-unit (~> 2.2)
     haml (3.1.4)
+    heroku (2.21.3)
+      launchy (>= 0.3.2)
+      netrc (~> 0.7.1)
+      rest-client (~> 1.6.1)
+      rubyzip
     hike (1.2.1)
     hpricot (0.8.6)
     i18n (0.6.0)
@@ -102,6 +108,8 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
       railties (>= 3.0.0)
+    launchy (2.0.5)
+      addressable (~> 2.2.6)
     linecache19 (0.5.12)
       ruby_core_source (>= 0.1.4)
     mail (2.4.1)
@@ -110,6 +118,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.17.2)
     multi_json (1.0.4)
+    netrc (0.7.1)
     nokogiri (1.5.0)
     orm_adapter (0.0.6)
     pg (0.13.1)
@@ -146,6 +155,8 @@ GEM
     rdoc (3.12)
       json (~> 1.4)
     remotipart (1.0.2)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     ruby-debug-base19 (0.11.25)
       columnize (>= 0.3.1)
       linecache19 (>= 0.5.11)
@@ -168,10 +179,22 @@ GEM
       ffi (~> 1.0.9)
       multi_json (~> 1.0.4)
       rubyzip
+    sequel (3.20.0)
+    sinatra (1.0)
+      rack (>= 1.0)
     sprockets (2.1.2)
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    sqlite3 (1.3.5)
+    sqlite3-ruby (1.3.3)
+      sqlite3 (>= 1.3.3)
+    taps (0.3.23)
+      rack (>= 1.0.1)
+      rest-client (>= 1.4.0, < 1.7.0)
+      sequel (~> 3.20.0)
+      sinatra (~> 1.0.0)
+      sqlite3-ruby (~> 1.2)
     test-unit (2.4.7)
     thor (0.14.6)
     tilt (1.3.3)
@@ -197,6 +220,7 @@ DEPENDENCIES
   factory_girl_rails
   growl
   guard-test
+  heroku
   jquery-rails
   kaminari
   pg
@@ -207,4 +231,5 @@ DEPENDENCIES
   ruby-debug19
   ruby-prof
   sass-rails (= 3.2.3)
+  taps
   uglifier (= 1.0.3)

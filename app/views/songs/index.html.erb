@@ -1,10 +1,10 @@
-<h1>Listing songs</h1>
+<h2>Music</h2>
 
-<% @songs.each do |song| %>
-  <tr>
-    <td><%= link_to song.name, song %></td>
-    <td><%= raw song.embed %></td>
-  </tr>
-<% end %>
-</table>
-<br />
+<ul id='post-list'>
+  <% @songs.each do |song| %>
+    <li>
+      <h3><%= link_to song.name, song %></h3>
+      <div class='body'><%= raw song.embed %></h3>
+    </li>
+  <% end %>
+</ul>
