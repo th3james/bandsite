@@ -39,5 +39,8 @@ module Bandsite
 
     # Enable the asset pipeline
     config.assets.enabled = true
+
+    # Don't init the application on precompile
+    config.assets.initialize_on_precompile = false
   end
 end
