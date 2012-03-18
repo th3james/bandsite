@@ -40,7 +40,9 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </a>
-        <%= link_to 'BARCODE CHANNEL', root_url, :class => 'brand' %>
+        <%= link_to root_url, :class => 'brand' do %>
+          BARCODE CHANNEL <small>></small>
+        <% end %>
         <div class="nav-collapse">
           <ul class="nav">
             <li class='active'><%= link_to "News", posts_path %></li>
@@ -56,7 +58,7 @@
 
   <div class='container'>
     <h1 id='header-name'>BARCODE CHANNEL</h1>
-    <span id='mission'>Post-punk guitars, laptop beats and a DIY ethic since 2009</span>
+    <div id='mission'>Post-punk guitars, laptop beats and a DIY ethic since 2009</div>
 
     <div id="main-content" data-pjax-container>
       <%= yield %>

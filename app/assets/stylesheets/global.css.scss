@@ -18,6 +18,14 @@ body {
   box-shadow: 3px 3px 15px #333;
 }
 
+a.brand {
+  small {
+    color: #666;
+    position:relative;
+    top:-2px;
+  }
+}
+
 #header-name {
   border-width: 5px 0;
   border-style: solid;
@@ -25,16 +33,13 @@ body {
   color: white;
   font-size:58px;
   line-height:58px;
-  margin-bottom:15px;
+  margin-bottom:10px;
 }
 
 #mission {
   color:white;
-  font-style:italic
-}
-
-#main-content {
-  color:white;
+  font-style:italic;
+  margin-bottom:10px;
 }
 
 footer {
@@ -72,8 +77,19 @@ footer {
   }
 }
 
+.can-haz-shadow {
+  height: 0;
+
+  -webkit-box-shadow: 0px 5px 25px 0px rgba(3, 3, 3, 0.5);
+  -moz-box-shadow: 0px 5px 25px 0px rgba(3, 3, 3, 0.5);
+  box-shadow: 0px 5px 25px 0px rgba(3, 3, 3, 0.5);
+}
 #main-content {
+  background-color: #3E3D42;
+  color:white;
+  padding: 0 10px 5px 10px;
+
   > h2 {
-    border-bottom: 1px solid
+    
   }
 }
