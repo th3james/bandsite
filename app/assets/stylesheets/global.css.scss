@@ -12,6 +12,10 @@ body {
   background-color: $light_grey;
 }
 
+iframe, object, embed{
+  max-width: 100%;
+}
+
 label {
   color: #EEE;
 }
@@ -94,10 +98,15 @@ footer {
   padding: 0 10px 5px 10px;
 
   > h2 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Webdings, sans-serif;
     color: white;
-    border-bottom: 1px solid #666;
+    border-bottom: 1px solid #888;
+    padding-top: 5px;
     margin-bottom: 10px;
+  }
+
+  h3 {
+    font-weight:normal;
   }
 
   a {
@@ -110,11 +119,10 @@ footer {
   margin-left: 0;
 
   li {
-    margin-bottom: 15px;
-    border-bottom: 1px solid #333;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #47494C;
 
-    h3 {
-    }
     div.body {
       padding: 5px;
     }
