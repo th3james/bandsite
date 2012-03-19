@@ -107,6 +107,7 @@ footer {
 
   h3 {
     font-weight:normal;
+    margin-bottom: 2px;
   }
 
   a {
@@ -125,6 +126,10 @@ footer {
 
     div.body {
       padding: 5px;
+
+      p {
+        margin-bottom: 5px;
+      }
     }
   }
 }
