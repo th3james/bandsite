@@ -53,12 +53,21 @@ a.brand {
 footer {
   background-color: $bc-green;
   padding: 10px;
-  color:white;
+  color: #3E3D41;
+
+  h4 {
+    color: #FFF;
+    font-size: 24px;
+    line-height: 36px;
+  }
+  p {
+    margin-bottom: 3px;
+  }
 
   ul#ext-links {
     margin-left: 0;
     a li {
-      color:white;
+      color: #3E3D41;
       list-style:none;
 
       font-size:18px;
@@ -95,7 +104,7 @@ footer {
 #main-content {
   background-color: #3E3D42;
   color: #DDD;
-  padding: 5px 10px;
+  padding: 5px 10px 15px 10px;
 
   > h2 {
     font-family: Webdings, sans-serif;
