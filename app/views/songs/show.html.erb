@@ -1,13 +1,7 @@
-<p id="notice"><%= notice %></p>
+<h3><%= @song.name %></h3>
 
-<p>
-  <b>Name:</b>
-  <%= @song.name %>
-</p>
-
-<p>
-  <b>Body:</b>
+<div class='body'>
   <%= raw @song.embed %>
-</p>
+</div>
 
-<%= link_to 'Back', songs_path %>
+<%= link_to 'Back to the Songs page', songs_path %>

@@ -1,13 +1,6 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Title:</b>
-  <%= @post.title %>
-</p>
-
-<p>
-  <b>Body:</b>
+<h3><%= @post.title %></h3>
+<div class='body'>
   <%= raw @post.body %>
-</p>
+</div>
 
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Back to the News page', posts_path %>
