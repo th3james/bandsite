@@ -14,6 +14,7 @@
     }
   </style>
   <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
@@ -64,17 +65,22 @@
       <%= yield %>
     </div>
     <footer>
-      <h4>About Us</h4>
-      <p>We are Barcode Channel. We write songs around angular guitar lines and programmed beats, drawing influence from artists such as Radiohead, Foals, Bloc Party and Interpol.</p>
-      <p>The three of us work in an entirely DIY fashion, hidden away in our makeshift studio, merging our love of post punk and indie rock guitars with electronic production and beats. </p>
+      <div id='about-box'>
+        <h4>About Us</h4>
+        <p>We are Barcode Channel. We write songs around angular guitar lines and programmed beats, drawing influence from artists such as Radiohead, Foals, Bloc Party and Interpol.</p>
+        <p>The three of us work in an entirely DIY fashion, hidden away in our makeshift studio, merging our love of post punk and indie rock guitars with electronic production and beats. </p>
+      </div>
 
-      <h4>Other pages</h4>
-      <ul id='ext-links'>
-        <%= link_to '#' do %><li><span class='logo'><%= image_tag 'soundcloud.png' %></span><span>Soundcloud</span></li><% end %>
-        <%= link_to '#' do %><li><span class='logo'><%= image_tag 'facebook.png' %></span><span>Facebook</span></li><% end %>
-        <%= link_to '#' do %><li><span class='logo'><%= image_tag 'bandcamp.png' %></span><span>Bandcamp</span></li><% end %>
-        <%= link_to '#' do %><li><span class='logo'><%= image_tag 'youtube.png' %></span><span>YouTube</span></li><% end %>
-      </ul>
+      <div id='links-box'>
+        <h4>Other pages</h4>
+        <ul id='ext-links'>
+          <%= link_to '#' do %><li><span class='logo'><%= image_tag 'soundcloud.png' %></span><span>Soundcloud</span></li><% end %>
+          <%= link_to '#' do %><li><span class='logo'><%= image_tag 'facebook.png' %></span><span>Facebook</span></li><% end %>
+          <%= link_to '#' do %><li><span class='logo'><%= image_tag 'bandcamp.png' %></span><span>Bandcamp</span></li><% end %>
+          <%= link_to '#' do %><li><span class='logo'><%= image_tag 'youtube.png' %></span><span>YouTube</span></li><% end %>
+        </ul>
+      </div>
+
     </footer>
 
   </div>
