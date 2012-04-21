@@ -125,6 +125,10 @@ footer {
   }
 }
 
+#about-box, #links-box {
+  background-color: $bc-green;
+}
+
 #post-list {
   list-style-type:none;
   margin-left: 0;

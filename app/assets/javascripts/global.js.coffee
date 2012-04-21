@@ -12,7 +12,7 @@ $(document).ready () ->
       $('html, body').animate({
          scrollTop: $(target).offset().top
       }, 500)
-      $(target).effect("pulsate", { times:1 }, 2000)
+      $(target).effect("highlight", {color: '#FF7826'}, 1500)
       return false
     else
       $('#navigation-bar li').removeClass 'active'
