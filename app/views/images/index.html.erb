@@ -9,7 +9,7 @@
 
 <% @images.each do |image| %>
   <tr>
-    <td><%= link_to image_tag(image.image.url), image %></td>
+    <td><%= link_to image_tag(image.image.url(:small)), image %></td>
     <td><%= link_to 'Show', image %></td>
   </tr>
 <% end %>
