@@ -1,4 +1,5 @@
 Bandsite::Application.routes.draw do
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   devise_for :users
@@ -6,6 +7,8 @@ Bandsite::Application.routes.draw do
   resources :songs, :only => [:index, :show]
 
   resources :posts, :only => [:index, :show]
+
+  resources :images, :only => [:index, :show]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

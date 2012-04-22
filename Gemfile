@@ -19,6 +19,7 @@ end
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'pjax-rails'
+gem "paperclip", "~> 3.0"
 
 gem "devise"
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
