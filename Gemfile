@@ -33,6 +33,7 @@ gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
 group :development do
   gem 'capistrano'
+  gem 'rvm-capistrano'
 end
 
 group :development, :test do

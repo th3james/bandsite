@@ -209,6 +209,8 @@ GEM
       mime-types (>= 1.16)
     ruby-prof (0.13.0)
     rubyzip (0.9.9)
+    rvm-capistrano (1.3.0)
+      capistrano (>= 2.0.0)
     safe_yaml (0.9.0)
     sass (3.2.7)
     sass-rails (3.2.6)
@@ -272,6 +274,7 @@ DEPENDENCIES
   rails_admin!
   rake
   ruby-prof
+  rvm-capistrano
   sass-rails
   taps
   uglifier (= 1.0.3)
