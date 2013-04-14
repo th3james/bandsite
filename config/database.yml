@@ -1,14 +1,14 @@
 development:
-  username: postgres
   adapter: postgresql
+  username: th3james
+  host: localhost
   database: bandsite_development
-  password: postgres
 
 test:
-  username: postgres
+  username: th3james
   adapter: postgresql
   database: bandsite_test
-  password: postgres
+  host: localhost
 
 production:
   username: postgres
