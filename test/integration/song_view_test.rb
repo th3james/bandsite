@@ -4,8 +4,8 @@ class SongViewTest < ActionDispatch::IntegrationTest
 
   test "2 songs exists, you see both of them on the home page" do
     #Setup
-    song_1 = Factory.create(:song, :name => 'first song', :embed => 'first embed')
-    song_2 = Factory.create(:song, :name => '2nd song', :embed => '2nd embed')
+    song_1 = FactoryGirl.create(:song, :name => 'first song', :embed => 'first embed')
+    song_2 = FactoryGirl.create(:song, :name => '2nd song', :embed => '2nd embed')
 
     #Page interaction
     visit root_url
@@ -23,8 +23,8 @@ class SongViewTest < ActionDispatch::IntegrationTest
 
   test "2 songs exist, on clicking the name on the homepage, you are taken to the show page" do
     #Model setup
-    song_1 = Factory.create(:song, :name => 'first song', :embed => 'first embed')
-    song_2 = Factory.create(:song, :name => '2nd song', :embed => '2nd embed')
+    song_1 = FactoryGirl.create(:song, :name => 'first song', :embed => 'first embed')
+    song_2 = FactoryGirl.create(:song, :name => '2nd song', :embed => '2nd embed')
 
     #Page navigation
     visit root_url
@@ -44,7 +44,7 @@ class SongViewTest < ActionDispatch::IntegrationTest
 
   test "Embed content is printed unescaped on index, so links etc can be created" do
     #Setup
-    song = Factory.create(:song, :embed => "<a href='#{root_url}'>MagicSongEmbedLink</a>")
+    song = FactoryGirl.create(:song, :embed => "<a href='#{root_url}'>MagicSongEmbedLink</a>")
 
     #Navigation
     visit songs_path
@@ -56,7 +56,7 @@ class SongViewTest < ActionDispatch::IntegrationTest
 
   test "Embed content is printed unescaped on show page, so links etc can be created" do
     #Setup
-    song = Factory.create(:song, :embed => "<a href='#{root_url}'>MagicSongEmbedLink</a>")
+    song = FactoryGirl.create(:song, :embed => "<a href='#{root_url}'>MagicSongEmbedLink</a>")
 
     #Navigation
     visit song_path(song)

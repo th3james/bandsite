@@ -3,8 +3,8 @@ require 'test_helper'
 class HomepageNewsPostsTest < ActionDispatch::IntegrationTest
 
   test "2 posts exists, you see both of them on the home page" do
-    post_1 = Factory.create(:post, :title => 'first post', :body => 'first body')
-    post_2 = Factory.create(:post, :title => '2nd post', :body => '2nd body')
+    post_1 = FactoryGirl.create(:post, :title => 'first post', :body => 'first body')
+    post_2 = FactoryGirl.create(:post, :title => '2nd post', :body => '2nd body')
 
     visit root_url
 
@@ -16,8 +16,8 @@ class HomepageNewsPostsTest < ActionDispatch::IntegrationTest
   end
 
   test "2 posts exist, on clicking the title on the homepage, you are taken to the show page" do
-    post_1 = Factory.create(:post, :title => 'first post', :body => 'first body')
-    post_2 = Factory.create(:post, :title => '2nd post', :body => '2nd body')
+    post_1 = FactoryGirl.create(:post, :title => 'first post', :body => 'first body')
+    post_2 = FactoryGirl.create(:post, :title => '2nd post', :body => '2nd body')
 
     visit root_url
 
@@ -36,12 +36,12 @@ class HomepageNewsPostsTest < ActionDispatch::IntegrationTest
     #Setup
     #Create 5 older posts
     5.times do |i|
-      Factory.create(:post, :title => "Older post #{i}")
+      FactoryGirl.create(:post, :title => "Older post #{i}")
     end
     sleep(1)
     #Create 5 newer posts
     5.times do |i|
-      Factory.create(:post, :title => "Newer post #{i}")
+      FactoryGirl.create(:post, :title => "Newer post #{i}")
     end
 
     visit posts_path
@@ -53,7 +53,7 @@ class HomepageNewsPostsTest < ActionDispatch::IntegrationTest
 
   test "Body text is printed unescaped on index, so links etc can be created" do
     #Setup
-    post_1 = Factory.create(:post, :body => "<a href='#{root_url}'>MagicEmbeddedLink</a>")
+    post_1 = FactoryGirl.create(:post, :body => "<a href='#{root_url}'>MagicEmbeddedLink</a>")
 
     #Navigation
     visit posts_path
@@ -65,7 +65,7 @@ class HomepageNewsPostsTest < ActionDispatch::IntegrationTest
 
   test "Body text is printed unescaped on show page, so links etc can be created" do
     #Setup
-    post_1 = Factory.create(:post, :body => "<a href='#{root_url}'>MagicEmbeddedLink</a>")
+    post_1 = FactoryGirl.create(:post, :body => "<a href='#{root_url}'>MagicEmbeddedLink</a>")
 
     #Navigation
     visit post_path(post_1)
