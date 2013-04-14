@@ -1,17 +1,18 @@
 source 'http://rubygems.org'
 
-gem 'rails'
+gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'rake'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', '3.2.3'
-  gem 'coffee-rails', '3.2.1'
+  gem 'sass-rails'
+  gem 'coffee-rails'
   gem 'uglifier', '1.0.3'
   gem 'execjs'
 end
@@ -29,10 +30,13 @@ gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+
+group :development do
+  gem 'capistrano'
+end
 
 group :development, :test do
-  gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'debugger'
   gem 'heroku'
   gem 'taps'
 end
@@ -42,7 +46,7 @@ group :test do
   #gem 'turn', :require => false #Seems to break guard
 
   gem "factory_girl_rails"
-  gem "capybara"
+  gem "capybara", '1.1.2'
   gem "guard-test"
 
   gem 'ruby-prof'
