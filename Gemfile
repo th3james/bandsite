@@ -21,6 +21,8 @@ gem 'jquery-rails'
 gem 'kaminari'
 gem 'pjax_rails'
 gem "paperclip", "~> 3.0"
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 
 gem "devise"
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
@@ -30,6 +32,10 @@ gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 # gem 'unicorn'
 
 # Deploy with Capistrano
+
+group :assets do
+  gem 'twitter-bootstrap-rails'
+end
 
 group :development do
   gem 'capistrano'
