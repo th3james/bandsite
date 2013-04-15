@@ -19,7 +19,7 @@ end
 
 gem 'jquery-rails'
 gem 'kaminari'
-gem 'pjax-rails'
+gem 'pjax_rails'
 gem "paperclip", "~> 3.0"
 
 gem "devise"

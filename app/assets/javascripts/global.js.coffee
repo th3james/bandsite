@@ -1,6 +1,6 @@
 $(document).ready () ->
   $('#navigation-bar a').click (e) ->
-    elem = e.srcElement
+    elem = e.currentTarget
 
     target = $(elem).attr('href')
     
@@ -18,3 +18,4 @@ $(document).ready () ->
       $('#navigation-bar li').removeClass 'active'
       $(elem).parent().addClass 'active'
 
+    $('a:not([data-remote]):not([data-behavior]):not([data-skip-pjax])').pjax('[data-pjax-container]')

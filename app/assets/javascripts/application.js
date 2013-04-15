@@ -8,5 +8,5 @@
 //= require jquery_ujs
 //= require jquery-ui
 //
-//= require pjax
+//= require jquery.pjax
 //= require_tree .
