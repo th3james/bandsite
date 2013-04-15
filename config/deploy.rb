@@ -16,7 +16,7 @@ role :app, host                          # This may be the same as your `Web` se
 role :db,  host, :primary => true # This is where Rails migrations will run
 
 set :scm, :git
-set :branch, "rails_3_1"
+set :branch, "master"
 # Target directory for the application on the web and app servers.
 set(:deploy_to) { File.join("", "home", user, "www", application) }
 
