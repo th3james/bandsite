@@ -47,8 +47,7 @@
         <div class="nav-collapse">
           <ul id='navigation-bar' class="nav">
             <li class='active'><%= link_to "News", posts_path %></li>
-            <li><%= link_to "Listen", songs_path %></li>
-            <li><%= link_to "Images", images_path %></li>
+            <li><%= link_to "Listen", 'http://barcodechannel.bandcamp.com' %></li>
             <li><%= link_to "About", '#about-box' %></li>
             <li><%= link_to "Links", '#links-box' %></li>
           </ul>
@@ -76,7 +75,7 @@
         <ul id='ext-links'>
           <%= link_to '#' do %><li><span class='logo'><%= image_tag 'soundcloud.png' %></span><span>Soundcloud</span></li><% end %>
           <%= link_to '#' do %><li><span class='logo'><%= image_tag 'facebook.png' %></span><span>Facebook</span></li><% end %>
-          <%= link_to '#' do %><li><span class='logo'><%= image_tag 'bandcamp.png' %></span><span>Bandcamp</span></li><% end %>
+          <%= link_to 'http://barcodechannel.bandcamp.com' do %><li><span class='logo'><%= image_tag 'bandcamp.png' %></span><span>Bandcamp</span></li><% end %>
           <%= link_to '#' do %><li><span class='logo'><%= image_tag 'youtube.png' %></span><span>YouTube</span></li><% end %>
         </ul>
       </div>
