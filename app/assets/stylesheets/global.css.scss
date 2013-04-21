@@ -65,7 +65,7 @@ footer {
   }
 
   ul#ext-links {
-    margin: 0;
+    margin: -8px 10px 0;
     a li {
       color: #3E3D41;
       list-style:none;
@@ -76,17 +76,21 @@ footer {
       overflow:hidden;
     }
     span {
-      padding: 5px;
+      padding: 5px 1px;
 
       float:left;
       width: 200px;
       height: 22px;
+      line-height:24px;
     }
     span.logo {
-      width: 24px;
+      width: 30px;
+      line-height: 19px;
 
       img {
         position:relative;
+        height: 24px;
+        width: 24px;
         top: -1px;
       }
     }
