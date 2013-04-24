@@ -61,6 +61,7 @@
             <li class='active'><%= link_to "News", posts_path %></li>
             <li><%= link_to "Listen", 'http://barcodechannel.bandcamp.com' %></li>
             <li><%= link_to "About", '#about-box' %></li>
+            <li><%= link_to "Contact", '#contact-box' %></li>
             <li><%= link_to "Links", '#links-box' %></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -76,10 +77,16 @@
       <%= yield %>
     </div>
     <footer>
-      <div id='about-box'>
-        <h4>About Us</h4>
-        <p>We are Barcode Channel. We write songs around angular guitar lines and programmed beats, drawing influence from artists such as Radiohead, Foals, Bloc Party and Interpol.</p>
-        <p>The three of us work in an entirely DIY fashion, hidden away in our makeshift studio, merging our love of post punk and indie rock guitars with electronic production and beats. </p>
+      <div id='the-left'>
+        <div id='about-box'>
+          <h4>About Us</h4>
+          <p>Hi there. We are Barcode Channel, a 3-piece from Cambridge fusing straight up post-punk like LCD Soundsystem and Bloc Party with more electronic influences like SBTRKT and Radiohead's Kid A </p>
+          <p>We work by combining angular guitars with a laptop for beats, samples and synths, working strictly DIY and taking on all the production and recording duties ourselves. While not being the easiest path (and having quite a learning curve!), it's key to shaping our sound. Coupled with drawing influences from a wide range of genres (from Rustie to Wu-Tang), we hope to create something a little different.</p>
+        </div>
+        <div id='contact-box'>
+          <h4>Contact</h4>
+          <p>Want to get hold of us? <a href="mailto:barcodechannel.com">barcodechannel@gmail.com</a></p>
+        </div>
       </div>
 
       <div id='links-box'>
