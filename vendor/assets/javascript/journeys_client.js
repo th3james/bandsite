@@ -1,0 +1,1 @@
+(function(){var t;t="http://stage.journ.cyanoryx.com",window.Journeys={post:function(){var n;return n={slug:document.URL},$.ajax({type:"POST",url:""+t+"/events",data:JSON.stringify(n),contentType:"application/json; charset=utf-8"})}}}).call(this);

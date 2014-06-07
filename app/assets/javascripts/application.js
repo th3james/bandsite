@@ -10,4 +10,9 @@
 //= require jquery-ui
 //
 //= require jquery.pjax
+//= require journeys_client.js
 //= require_tree .
+
+$(document).ready(function() {
+  Journeys.post();
+})
